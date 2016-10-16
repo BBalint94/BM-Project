@@ -1,0 +1,46 @@
+BM Project : Követelmény specifikáció:
+
+	1. A megrendelő által meghatározott feladat:
+	
+		Egy egyjátékos, körökre osztott harcrendszerű WPF-es játékalkalmazás létrehozása windows operációs rendszerre.
+		
+	2. Követelmények:
+	
+		- A felhasználó létrehozhasson karaktert, amit használva játszhat.
+		- A létrehozás során meghatározott kasztok közül kelljen egyet választani.
+		- Karakter adatlap készítése, mely tartalmazza a fontosabb adatokat (név, profilkép, életerő, kaszt, felszerelés...stb.)
+		- Tartalmazzon profilképeket, amik közül választania kell a felhasználónak.
+		- A karakter adatainak elmentése adatbázisba.
+		- Legyen lehetőség akár több karakter létrehozására is, de egyszerre csak eggyel lehessen játszani.
+		- A korábban elkészített karakterekkel a korábbi játék folytatása.
+		- Harc során két fél küzdjön meg egymással, az egyik a felhasználó karaktere, a másik pedig a gép által generált véletlenszerűen kiválasztott ellenség.
+		- A harc kimenetelétől függően a játék jutalmazzon, illetve büntessen (játékbeli pénz).
+		- Boltrendszer, a boltban különféle tárgyak vásárlása játékbeli pénzért.
+		- A karakterlap tartalmazza az eddig megnyert és elveszített párbajok számát.
+		- Harchoz szükséges tárgyak:			- közelharci fegyverek (kardok, bárdok, pörölyök...stb.)
+												- távolsági fegyverek (íjak, dobótőrök...stb.)
+												- mágikus fegyverek (varázspálcák, varázsbotok, varázsgömbök...stb.)
+												- védelmi felszerelések (pajzsok, láncingek...stb.)
+												- gyógyító felszerelések (életerőitalok, ételek...stb.)- harchoz szükséges tárgyak:- közelharci fegyverek (kardok, bárdok, pörölyök...stb.)
+												- távolsági fegyverek (íjak, dobótőrök...stb.)
+												- mágikus fegyverek (varázspálcák, varázsbotok, varázsgömbök...stb.)
+												- védelmi felszerelések (pajzsok, láncingek...stb.)
+												- gyógyító felszerelések (életerőitalok, ételek...stb.)
+												
+		- Harc menete: 
+				- két fél harcol egymás ellen, mindkettő rendelkezik egy profilképpel, életerősávval, fegyverrel, gyógyító felszereléssel
+				- a harc egy gomb megnyomásával bonyolódik le, ekkor először támad a karakter és a fegyverének sebzésétől függően megsebzi az ellenfelet, aki veszít az életerejéből, majd megtámadja a felhasználó karakterét.
+				- addig tart a harc, amíg az egyik életerősáv értéke 0-ra nem csökken.
+	
+	3. Fejlesztői környezet:
+	
+		A játékprogram készítés során Visual Studio 2013-at használjuk.
+		A program C# és XAML nyelven íródik.
+		
+	4. Jelenlegi folyamatok:
+	
+		- az alkalmazás adatbázisának megtervezése
+		- képanyagok gyűjtése
+		- felhasználói felület kialakításának tervezése
+		
+		
