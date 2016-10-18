@@ -1,0 +1,13 @@
+﻿<Window x:Class="Raetreon.Betoltes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Betoltes" Height="700" Width="1000">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Karakter betöltése" FontFamily="Andalus" FontSize="40" HorizontalAlignment="Center" Margin="30"/>
+            <ComboBox x:Name="karakter_valaszto" Width="400" Height="30" Margin="10"/>
+            <Button x:Name="kivalaszt" Content="Kiválaszt" FontFamily="Andalus" FontSize="20" Width="100" Height="40" Margin="10"/>
+            <Button x:Name="visszalep" Content="Vissza" FontFamily="Andalus" FontSize="20" Width="100" Height="40" Margin="10" Click="visszalep_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
