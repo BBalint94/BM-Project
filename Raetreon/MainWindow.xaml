@@ -3,8 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="700" Width="1000">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/Background/Háttér.jpeg"/>
+        </Grid.Background>
         <StackPanel Orientation="Vertical">
-            <Button x:Name="ujjatek" Content="Új játék" FontFamily="Andalus" FontSize="30" Width="120" Height="50" Margin=" 0 300 0 20"  Click="ujjatek_Click"/>
+            <Button x:Name="ujjatek" Content="Új játék" FontFamily="Andalus" FontSize="30" Width="120" Height="50" Margin=" 0 250 0 20"  Click="ujjatek_Click"/>
             <Button x:Name="betolt" Content="Betöltés" FontFamily="Andalus" FontSize="30" Width="120" Height="50" Margin="0 0 0 20" Click="betolt_Click"/>
             <Button x:Name="kilepes" Content="Kilépés" FontFamily="Andalus" FontSize="30" Width="120" Height="50" Margin="0 0 0 20" Click="kilepes_Click" />
         </StackPanel>

@@ -15,3 +15,20 @@ E:\EKF-PTI\3.félév\Proba\WPFproba\Raetreon\Raetreon\obj\Debug\Ujjatek.baml
 E:\EKF-PTI\3.félév\Proba\WPFproba\Raetreon\Raetreon\obj\Debug\Ujjatek.g.cs
 E:\EKF-PTI\3.félév\Proba\WPFproba\Raetreon\Raetreon\obj\Debug\Betoltes.baml
 E:\EKF-PTI\3.félév\Proba\WPFproba\Raetreon\Raetreon\obj\Debug\Betoltes.g.cs
+C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\bin\Debug\Raetreon.exe.config
+C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\obj\Debug\Raetreon.exe
+C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\obj\Debug\Raetreon.pdb
+C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\bin\Debug\Raetreon.exe
+C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\bin\Debug\Raetreon.pdb
+C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\obj\Debug\Raetreon.csprojResolveAssemblyReference.cache
+C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\obj\Debug\Betoltes.baml
+C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\obj\Debug\MainWindow.baml
+C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\obj\Debug\Ujjatek.baml
+C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\obj\Debug\Betoltes.g.cs
+C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\obj\Debug\MainWindow.g.cs
+C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\obj\Debug\Ujjatek.g.cs
+C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\obj\Debug\App.g.cs
+C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\obj\Debug\Raetreon_MarkupCompile.cache
+C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\obj\Debug\Raetreon.g.resources
+C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\obj\Debug\Raetreon.Properties.Resources.resources
+C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\obj\Debug\Raetreon.csproj.GenerateResource.Cache

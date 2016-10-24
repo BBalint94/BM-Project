@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Raetreon
 {
-    class Karakter : IKarakter
+     public class Karakter : IKarakter
     {
         public Karakter()
         {

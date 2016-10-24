@@ -56,8 +56,20 @@
     <Compile Include="Betoltes.xaml.cs">
       <DependentUpon>Betoltes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IFegyver.cs" />
+    <Compile Include="Interfaces\IHarcos.cs" />
+    <Compile Include="Interfaces\IIjasz.cs" />
     <Compile Include="Interfaces\IKarakter.cs" />
+    <Compile Include="Interfaces\IMagus.cs" />
+    <Compile Include="Kasztok\Harcos.cs" />
+    <Compile Include="Kasztok\Ijasz.cs" />
+    <Compile Include="Kasztok\Magus.cs" />
     <Compile Include="Predecessors\Karakter.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Targyak\Fegyverek\Fegyver.cs" />
+    <Compile Include="Targyak\Fegyverek\KozelharciF.cs" />
+    <Compile Include="Targyak\Fegyverek\MagikusF.cs" />
+    <Compile Include="Targyak\Fegyverek\TavolsagiF.cs" />
     <Compile Include="Ujjatek.xaml.cs">
       <DependentUpon>Ujjatek.xaml</DependentUpon>
     </Compile>
@@ -109,7 +121,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Background\BM-Project.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background\Háttér.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
