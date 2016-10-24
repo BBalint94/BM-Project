@@ -32,3 +32,6 @@ C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetre
 C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\Raetreon\obj\Debug\Raetreon.g.resources
 C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\Raetreon\obj\Debug\Raetreon.Properties.Resources.resources
 C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\BM-Project-master\Raetreon\Raetreon\obj\Debug\Raetreon.csproj.GenerateResource.Cache
+E:\EKF-PTI\3.félév\RFT gy\BM-Project-master\Raetreon\Raetreon\bin\Debug\Raetreon.exe.config
+E:\EKF-PTI\3.félév\RFT gy\BM-Project-master\Raetreon\Raetreon\obj\Debug\Raetreon.exe
+E:\EKF-PTI\3.félév\RFT gy\BM-Project-master\Raetreon\Raetreon\obj\Debug\Raetreon.pdb
