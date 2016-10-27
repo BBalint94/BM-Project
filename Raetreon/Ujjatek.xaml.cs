@@ -28,14 +28,24 @@ namespace Raetreon
             return uniqueInstance;
 
         }
+
+        static FegyverAdatbazis fa = FegyverAdatbazis.getInstance();
+        static List<KozelharciF> khf = fa.KhFegyverLekerdez();
+
         public Ujjatek(string a)
         {
-            InitializeComponent();
-            this.ShowDialog();
+            InitializeComponent();            
+            this.ShowDialog();           
         }
         public void AblakMegjelenit()
         {
             InitializeComponent();
+            if(!kasztvalaszto.Items.Contains("Harcos") || !kasztvalaszto.Items.Contains("Mágus") || !kasztvalaszto.Items.Contains("Íjász"))
+            {
+                kasztvalaszto.Items.Add("Harcos");
+                kasztvalaszto.Items.Add("Mágus");
+                kasztvalaszto.Items.Add("Íjász");
+            }            
             this.Show();            
         }
 
@@ -50,6 +60,22 @@ namespace Raetreon
         private void letrehoz_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void kivalazt_kaszt_Click(object sender, RoutedEventArgs e)
+        {
+            int tartszam = fegyvervalaszto.Items.Count;
+            if (kasztvalaszto.Items.IndexOf(kasztvalaszto.SelectedItem) == 0)
+            {
+                for (int i = 0; i < tartszam; i++)
+                {
+                    fegyvervalaszto.Items.RemoveAt(fegyvervalaszto.Items.IndexOf(fegyvervalaszto.Items[0]));
+                }
+                for (int i = 0; i < khf.Count; i++)
+                {
+                    fegyvervalaszto.Items.Add(khf[i].nev);
+                }
+            }
         }
     }
 }

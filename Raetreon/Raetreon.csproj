@@ -58,6 +58,7 @@
     </Compile>
     <Compile Include="Containers\FegyverRaktar.cs" />
     <Compile Include="Containers\KarakterRaktar.cs" />
+    <Compile Include="Database\FegyverAdatbazis.cs" />
     <Compile Include="Interfaces\IFegyver.cs" />
     <Compile Include="Interfaces\IHarcos.cs" />
     <Compile Include="Interfaces\IIjasz.cs" />
