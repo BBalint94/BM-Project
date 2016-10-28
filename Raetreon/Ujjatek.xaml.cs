@@ -31,6 +31,8 @@ namespace Raetreon
 
         static FegyverAdatbazis fa = FegyverAdatbazis.getInstance();
         static List<KozelharciF> khf = fa.KhFegyverLekerdez();
+        static List<MagikusF> magf = fa.MagFegyverLekerdez();
+        static List<TavolsagiF> tavf = fa.TavFegyverLekerdez();
 
         public Ujjatek(string a)
         {
@@ -75,6 +77,33 @@ namespace Raetreon
                 {
                     fegyvervalaszto.Items.Add(khf[i].nev);
                 }
+            }
+            else if (kasztvalaszto.Items.IndexOf(kasztvalaszto.SelectedItem) == 1)
+            {
+                for (int i = 0; i < tartszam; i++)
+                {
+                    fegyvervalaszto.Items.RemoveAt(fegyvervalaszto.Items.IndexOf(fegyvervalaszto.Items[0]));
+                }
+                for (int i = 0; i < magf.Count; i++)
+                {
+                    fegyvervalaszto.Items.Add(magf[i].nev);
+                }
+            }
+            else if (kasztvalaszto.Items.IndexOf(kasztvalaszto.SelectedItem) == 2)
+            {
+
+                for (int i = 0; i < tartszam; i++)
+                {
+                    fegyvervalaszto.Items.RemoveAt(fegyvervalaszto.Items.IndexOf(fegyvervalaszto.Items[0]));
+                }
+                for (int i = 0; i < tavf.Count; i++)
+                {
+                    fegyvervalaszto.Items.Add(tavf[i].nev);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Válassz kasztot!");
             }
         }
     }
