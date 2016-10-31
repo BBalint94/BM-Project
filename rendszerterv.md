@@ -48,6 +48,7 @@
         - életerősáv a szöveges változat helyett
         - tárgyak listájának kibővítése
         - animáció készítése, ami az interakciók hatására lejátszódik
+        
 ### Fejlesztés során használt szoftverkomponensek:
   * Visual Studio Community 2015: ingyenesen letölthető tanuló verzió
   * Microsoft Office: ingyenes tanulói verzió
