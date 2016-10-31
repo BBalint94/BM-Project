@@ -106,5 +106,11 @@ namespace Raetreon
                 _kaszt = value;
             }
         }
+
+        public void Tamad(Karakter ellenseg, Fegyver fegyver)
+        {
+            int sebzes = rnd.Next(0, fegyver.sebzes + 1);
+            ellenseg.eletero -= sebzes;
+        }
     }
 }

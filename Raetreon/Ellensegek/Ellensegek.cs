@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Raetreon
 {
-    class Ellenseg : Karakter, IEllenseg
+    public class Ellenseg : Karakter, IEllenseg
     {
         public Ellenseg() : base()
         {
@@ -36,6 +36,18 @@ namespace Raetreon
                 if (value >= 0 && value <= 3000)
                     _sebzes = value;
                 else throw new Exception("Hibás sebzés érték!");
+            }
+        }
+        private KozelharciF _ellenfegyver;
+        public KozelharciF ellenfegyver
+        {
+            get
+            {
+                return _ellenfegyver;
+            }
+            set
+            {
+                _ellenfegyver = value;
             }
         }
     }

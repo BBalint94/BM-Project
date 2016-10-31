@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Raetreon.Containers
+namespace Raetreon
 {
     class KarakterRaktar
     {

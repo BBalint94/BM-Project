@@ -3,6 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Label" x:Key="cimstyle">
+            <Setter Property="FontSize" Value="70"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="alapszoveg">
+            <Setter Property="FontFamily" Value="Andalus"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+        <Style TargetType="Label" x:Key="jatekosnevek">
+            <Setter Property="FontFamily" Value="Andalus"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+        <Style TargetType="Label" x:Key="labelstatok">
+            <Setter Property="FontFamily" Value="Andalus"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="textstatok">
+            <Setter Property="FontFamily" Value="Andalus"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Foreground" Value="Black"/>
+        </Style>
+        <Style TargetType="Border" x:Key="esemenyborder">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="5"/>
+        </Style>
     </Application.Resources>
 </Application>

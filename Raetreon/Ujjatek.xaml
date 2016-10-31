@@ -13,7 +13,7 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock Text="Válassz kasztot!:" FontFamily="Andalus" FontSize="20" Margin="10"/>
                 <ComboBox x:Name="kasztvalaszto" Width="140" Height="30"/>
-                <Button x:Name="kivalazt_kaszt" Content="Kiválaszt" Width="60" Height="30" Margin="10" FontFamily="Andalus" FontSize="14" Click="kivalazt_kaszt_Click"/>
+                <Button x:Name="kivalazt_kaszt" Content="Kiválaszt" Width="60" Height="30" Margin="10" FontFamily="Andalus" FontSize="14" Click="kivalaszt_kaszt_Click"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock Text="Név:" FontFamily="Andalus" FontSize="20" Margin="10"/>

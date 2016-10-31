@@ -1,0 +1,74 @@
+﻿<Window x:Class="Raetreon.Harcter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Raetreon"
+        mc:Ignorable="d"
+        Title="Harcter" Height="700" Width="1000">
+    <Grid>        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Vertical">
+            <Label x:Name="karakternev" Content="Játékosnév" Style="{StaticResource jatekosnevek}" Margin="10"/>
+            <Image x:Name="kepunk" Source="Images/Karakterek/noavatar.png" Width="250"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Életerő:" Style="{StaticResource textstatok}" Margin="30 0 10 0"/>
+                <TextBlock Text="1000" Style="{StaticResource textstatok}" Margin="0 00 0 0"/>
+                <TextBlock Text="/" Style="{StaticResource textstatok}" Margin="5 0 0 0"/>
+                <Label x:Name="jatekoseletero" Content="1000" Style="{StaticResource labelstatok}" Margin="0 -4 0 0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Kaszt:" Style="{StaticResource textstatok}" Margin="30 0 10 0"/>
+                <Label x:Name="jatkasztja" Content="-" Style="{StaticResource labelstatok}" Margin="0 -5 0 0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Fegyver:" Style="{StaticResource textstatok}" Margin="30 0 10 0"/>
+                <Label x:Name="jatfegyvere" Content="-" Style="{StaticResource labelstatok}" Margin="0 -5 0 0"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="0" Orientation="Vertical">
+            <Label x:Name="ellennev" Content="Ellenségnév" Style="{StaticResource jatekosnevek}" HorizontalAlignment="Right" Margin="10"/>
+            <Image x:Name="ellenkep" Source="Images/Karakterek/noavatar.png" Width="250"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <TextBlock Text="Életerő:" Style="{StaticResource textstatok}" Margin="30 0 10 0"/>
+                <TextBlock Text="1000" Style="{StaticResource textstatok}" Margin="0 0 0 0"/>
+                <TextBlock Text="/" Style="{StaticResource textstatok}" Margin="5 0 0 0"/>
+                <Label x:Name="ellensegeletero" Content="1000" Style="{StaticResource labelstatok}" Margin="0 -5 30 0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <TextBlock Text="Kaszt:" Style="{StaticResource textstatok}" Margin="0 0 10 0"/>
+                <Label x:Name="ellenkasztja" Content="-" Style="{StaticResource labelstatok}" Margin="0 -5 30 0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <TextBlock Text="Fegyver:" Style="{StaticResource textstatok}" Margin="0 0 10 0"/>
+                <Label x:Name="ellenfegyvere" Content="-" Style="{StaticResource labelstatok}" Margin="0 -5 30 0"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical" VerticalAlignment="Center">
+            <Button x:Name="tamadas" Width="120" Height="60" Content="Támadás!" FontFamily="Andalus" FontSize="28" FontWeight="Bold" Click="tamadas_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="1" Orientation="Vertical">
+            <Border Style="{StaticResource esemenyborder}" Height="155">
+                <StackPanel>
+                    <Button x:Name="kilepes" Content="Kilépés" Width="100" Height="40" FontFamily="Andalus" FontSize="25" Margin="0 50 0 54" HorizontalAlignment="Center" VerticalAlignment="Center" Click="kilepes_Click"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Orientation="Vertical">
+            <Border Style="{StaticResource esemenyborder}" Height="155">
+                <StackPanel>
+                    <TextBlock Text="Események:" Style="{StaticResource alapszoveg}" Margin="15 0 0 0"/>
+                    <TextBox x:Name="esemenyek" IsReadOnly="True" Background="Gray" TextWrapping="Wrap" Height="100" Margin="5"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>

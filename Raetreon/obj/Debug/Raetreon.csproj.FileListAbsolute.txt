@@ -49,3 +49,7 @@ E:\EKF-PTI\3.félév\RFT gy\BM-Project-master\Raetreon\bin\Debug\Raetreon.exe
 E:\EKF-PTI\3.félév\RFT gy\BM-Project-master\Raetreon\bin\Debug\Raetreon.pdb
 E:\EKF-PTI\3.félév\RFT gy\BM-Project-master\Raetreon\obj\Debug\Raetreon.Properties.Resources.resources
 E:\EKF-PTI\3.félév\RFT gy\BM-Project-master\Raetreon\obj\Debug\Raetreon.csproj.GenerateResource.Cache
+E:\EKF-PTI\3.félév\RFT gy\BM-Project-master\Raetreon\obj\Debug\App.baml
+E:\EKF-PTI\3.félév\RFT gy\BM-Project-master\Raetreon\obj\Debug\Harcter.g.cs
+E:\EKF-PTI\3.félév\RFT gy\BM-Project-master\Raetreon\obj\Debug\Raetreon_MarkupCompile.lref
+E:\EKF-PTI\3.félév\RFT gy\BM-Project-master\Raetreon\obj\Debug\Harcter.baml

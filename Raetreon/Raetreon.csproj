@@ -56,10 +56,16 @@
     <Compile Include="Betoltes.xaml.cs">
       <DependentUpon>Betoltes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Containers\EllensegRaktar.cs" />
     <Compile Include="Containers\FegyverRaktar.cs" />
     <Compile Include="Containers\KarakterRaktar.cs" />
+    <Compile Include="Database\EllensegAdatbazis.cs" />
     <Compile Include="Database\FegyverAdatbazis.cs" />
+    <Compile Include="Database\KarakterAdatbazis.cs" />
     <Compile Include="Ellensegek\Ellensegek.cs" />
+    <Compile Include="Harcter.xaml.cs">
+      <DependentUpon>Harcter.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IEllenseg.cs" />
     <Compile Include="Interfaces\IFegyver.cs" />
     <Compile Include="Interfaces\IHarcos.cs" />
@@ -79,6 +85,10 @@
       <DependentUpon>Ujjatek.xaml</DependentUpon>
     </Compile>
     <Page Include="Betoltes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Harcter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -128,6 +138,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Background\Háttér.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Karakterek\harcos 0.png" />
+    <Resource Include="Images\Karakterek\harcos 1.png" />
+    <Resource Include="Images\Karakterek\mágus 0.png" />
+    <Resource Include="Images\Karakterek\mágus 1.png" />
+    <Resource Include="Images\Karakterek\Íjász 0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Karakterek\noavatar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
