@@ -72,9 +72,13 @@
     <Compile Include="Interfaces\IIjasz.cs" />
     <Compile Include="Interfaces\IKarakter.cs" />
     <Compile Include="Interfaces\IMagus.cs" />
+    <Compile Include="Interfaces\IObserver.cs" />
+    <Compile Include="Interfaces\ISubject.cs" />
     <Compile Include="Kasztok\Harcos.cs" />
     <Compile Include="Kasztok\Ijasz.cs" />
     <Compile Include="Kasztok\Magus.cs" />
+    <Compile Include="Observer\Esemenykozlo.cs" />
+    <Compile Include="Observer\Hirdeto.cs" />
     <Compile Include="Predecessors\Karakter.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Targyak\Fegyverek\Fegyver.cs" />
@@ -137,18 +141,27 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Background\Háttér.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Karakterek\harcos 0.png" />
-    <Resource Include="Images\Karakterek\harcos 1.png" />
-    <Resource Include="Images\Karakterek\mágus 0.png" />
-    <Resource Include="Images\Karakterek\mágus 1.png" />
-    <Resource Include="Images\Karakterek\Íjász 0.png" />
+    <Resource Include="Images\Background\hatter.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Karakterek\noavatar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Karakterek\harcos0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Karakterek\harcos1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Karakterek\ijasz0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Karakterek\magus0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Karakterek\magus1.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

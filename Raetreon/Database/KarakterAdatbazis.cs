@@ -118,7 +118,7 @@ namespace Raetreon
                     ujmagus.nev = karakternevek[i];
                     ujmagus.maxeletero = 1000;
                     ujmagus.eletero = 1000;
-                    ujmagus.kep = "Images/Karakterek/mágus1.png";
+                    ujmagus.kep = "Images/Karakterek/magus1.png";
                     for (int j = 0; j < fegyverbazis.Count; j++)
                     {
                         if (fegyverek[i] == fegyverbazis[j].nev)
@@ -174,7 +174,7 @@ namespace Raetreon
                     ujijasz.nev = karakternevek[i];
                     ujijasz.maxeletero = 1000;
                     ujijasz.eletero = 1000;
-                    ujijasz.kep = "Images/Karakterek/Íjász0.png";
+                    ujijasz.kep = "Images/Karakterek/ijasz0.png";
                     for (int j = 0; j < fegyverbazis.Count; j++)
                     {
                         if (fegyverek[i] == fegyverbazis[j].nev)

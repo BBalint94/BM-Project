@@ -38,9 +38,9 @@ namespace Raetreon
         static Magus magusunk;        
         static Ijasz ijaszunk;        
         static bool vegevane = false;
-        // static Esemenykozlo ek = new Esemenykozlo();    / még nincs kidolgozva
-        // static Hirdeto hirnok = new Hirdeto("Hírnök");  / még nincs kidolgozva
-        // static int korokszama = 1;
+        static Esemenykozlo ek = new Esemenykozlo();
+        static Hirdeto hirnok = new Hirdeto("Hírnök");
+        static int korokszama = 1;
 
         public Harcter(string a)
         {
@@ -78,8 +78,8 @@ namespace Raetreon
                 jharcos.maxeletero = lekharcosok[lekharcosok.Count - 1].maxeletero;
                 jharcos.eletero = lekharcosok[lekharcosok.Count - 1].eletero;
                 jharcos.harcosfegyver = lekharcosok[lekharcosok.Count - 1].harcosfegyver;
-                jharcos.kep = lekharcosok[lekharcosok.Count - 1].kep;
-                harcosunk = jharcos;
+                jharcos.kep = lekharcosok[lekharcosok.Count - 1].kep;                
+                harcosunk = jharcos;                
             }
             else if (karakter.kivantkaszt == 1)
             {
@@ -90,7 +90,7 @@ namespace Raetreon
                 jmagus.eletero = lekmagusok[lekmagusok.Count - 1].eletero;
                 jmagus.magusfegyver = lekmagusok[lekmagusok.Count - 1].magusfegyver;
                 jmagus.kep = lekmagusok[lekmagusok.Count - 1].kep;
-                magusunk = jmagus;
+                magusunk = jmagus;                
             }
             else if (karakter.kivantkaszt == 2)
             {
@@ -101,7 +101,7 @@ namespace Raetreon
                 jijasz.eletero = lekijaszok[lekijaszok.Count - 1].eletero;
                 jijasz.ijaszfegyver = lekijaszok[lekijaszok.Count - 1].ijaszfegyver;
                 jijasz.kep = lekijaszok[lekijaszok.Count - 1].kep;
-                ijaszunk = jijasz;
+                ijaszunk = jijasz;               
             }
             else throw new Exception("Nincs ilyen kaszt!");
 
@@ -143,6 +143,7 @@ namespace Raetreon
                 ellensegeletero.Content = ellenseg.eletero;
                 ellenkasztja.Content = ellenseg.kaszt;
                 ellenfegyvere.Content = ellenseg.ellenfegyver.nev;
+                ellenseg.kep = ellensegek[ellensegek.Count - 1].kep;
                 EllenKepKirak(ellenseg.kep);
             }            
             else throw new Exception("Hiba");
@@ -169,25 +170,25 @@ namespace Raetreon
                     szenv = helete - heletu;
                     jatekoseletero.Content = harcosunk.eletero;
                     ellensegeletero.Content = ellenseg.eletero;
-                    //hirnok.update(korokszama, okoz, szenv, vegevane);
-                    //korokszama++;
+                    hirnok.update(korokszama, okoz, szenv, vegevane);
+                    korokszama++;
                     if (harcosunk.harckeptelen == true && ellenseg.harckeptelen == false)
                     {
                         MessageBox.Show("Vesztettél!");
                         vegevane = true;
-                       // hirnok.update(korokszama, okoz, szenv, vegevane);
+                        hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                     if (ellenseg.harckeptelen == true && harcosunk.harckeptelen == false)
                     {
                         MessageBox.Show("Nyertél!");
                         vegevane = true;
-                       // hirnok.update(korokszama, okoz, szenv, vegevane);
+                        hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                     if (harcosunk.harckeptelen == true && ellenseg.harckeptelen == true)
                     {
                         MessageBox.Show("Döntetlen!");
                         vegevane = true;
-                       // hirnok.update(korokszama, okoz, szenv, vegevane);
+                        hirnok.update(korokszama, okoz, szenv, vegevane);
                     }               
                 }
                 else throw new Exception("Nincs ellenfél!");
@@ -206,25 +207,25 @@ namespace Raetreon
                     szenv = helete - heletu;
                     jatekoseletero.Content = magusunk.eletero;
                     ellensegeletero.Content = ellenseg.eletero;
-                    // hirnok.update(korokszama, okoz, szenv, vegevane);
-                    // korokszama++;
+                    hirnok.update(korokszama, okoz, szenv, vegevane);
+                    korokszama++;
                     if (magusunk.harckeptelen == true && ellenseg.harckeptelen == false)
                     {
                         MessageBox.Show("Vesztettél!");
                         vegevane = true;
-                       // hirnok.update(korokszama, okoz, szenv, vegevane);
+                        hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                     if (ellenseg.harckeptelen == true && magusunk.harckeptelen == false)
                     {
                         MessageBox.Show("Nyertél!");
                         vegevane = true;
-                       // hirnok.update(korokszama, okoz, szenv, vegevane);
+                        hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                     if (magusunk.harckeptelen == true && ellenseg.harckeptelen == true)
                     {
                         MessageBox.Show("Döntetlen!");
                         vegevane = true;
-                        // hirnok.update(korokszama, okoz, szenv, vegevane);
+                        hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                 }                
                 else throw new Exception("Nincs ellenfél!");
@@ -244,25 +245,25 @@ namespace Raetreon
                     szenv = helete - heletu;
                     jatekoseletero.Content = ijaszunk.eletero;
                     ellensegeletero.Content = ellenseg.eletero;
-                   // hirnok.update(korokszama, okoz, szenv, vegevane);
-                   // korokszama++;
+                    hirnok.update(korokszama, okoz, szenv, vegevane);
+                    korokszama++;
                     if (ijaszunk.harckeptelen == true && ellenseg.harckeptelen == false)
                     {
                         MessageBox.Show("Vesztettél!");
                         vegevane = true;
-                       // hirnok.update(korokszama, okoz, szenv, vegevane);
+                        hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                     if (ellenseg.harckeptelen == true && ijaszunk.harckeptelen == false)
                     {
                         MessageBox.Show("Nyertél!");
                         vegevane = true;
-                        // hirnok.update(korokszama, okoz, szenv, vegevane);
+                        hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                     if (ijaszunk.harckeptelen == true && ellenseg.harckeptelen == true)
                     {
                         MessageBox.Show("Döntetlen!");
                         vegevane = true;
-                        // hirnok.update(korokszama, okoz, szenv, vegevane);
+                        hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                 }                
                 else throw new Exception("Nincs ellenfél!");
