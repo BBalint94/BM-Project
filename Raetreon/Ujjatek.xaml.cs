@@ -35,6 +35,12 @@ namespace Raetreon
         static List<TavolsagiF> tavf = fa.TavFegyverLekerdez();
         static KarakterRaktar karakterek = KarakterRaktar.getInstance();
         static KarakterAdatbazis karad = KarakterAdatbazis.getInstance();
+        static KepAdatbazis kepadatb = KepAdatbazis.getInstance();
+        static List<string> harcoskepek = kepadatb.HarcosKepLekerdez();
+        static List<string> ijaszkepek = kepadatb.IjaszKepLekerdez();
+        static List<string> maguskepek = kepadatb.MagusKepLekerdez();
+        static List<string> osszkep;
+        static int szamlalo = 0;        
 
         public Ujjatek(string a)
         {
@@ -53,6 +59,14 @@ namespace Raetreon
             this.Show();            
         }
 
+        public void KepKirak(string cim)
+        {
+            karakterkep.Source = new BitmapImage(new Uri(cim, UriKind.Relative));
+            karakterkep.Width = 250;
+            karakterkep.Height = 280;
+
+        }
+
         private void visszalep_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mw = new MainWindow();
@@ -67,15 +81,17 @@ namespace Raetreon
             {
                 try
                 {
+                    string eredetikep = karakterkep.Source.ToString();
+                    string keszkep = eredetikep.Remove(0, 41);
+                    //string kepkivon = "pack://application:,,,/Raetreon;component/";
                     string fegyver = fegyvervalaszto.Items[fegyvervalaszto.Items.IndexOf(fegyvervalaszto.SelectedItem)].ToString();
                     karakterek.kivantkaszt = 0;
-                    karad.JatHarcosFeltolt(karakternev.Text, "Harcos", fegyvervalaszto.Items[fegyvervalaszto.Items.IndexOf(fegyvervalaszto.SelectedItem)].ToString());
+                    karad.JatHarcosFeltolt(karakternev.Text, "Harcos", fegyvervalaszto.Items[fegyvervalaszto.Items.IndexOf(fegyvervalaszto.SelectedItem)].ToString(),keszkep);
                     Harcter harcter = Harcter.getInstance();
                     harcter.AblakMegjelenit();
-
                 }
                 catch
-                {
+                {                    
                     MessageBox.Show("Adjon meg minden adatot!");
                 }
             }
@@ -83,9 +99,11 @@ namespace Raetreon
             {
                 try
                 {
+                    string eredetikep = karakterkep.Source.ToString();
+                    string keszkep = eredetikep.Remove(0, 41);
                     string fegyver = fegyvervalaszto.Items[fegyvervalaszto.Items.IndexOf(fegyvervalaszto.SelectedItem)].ToString();
                     karakterek.kivantkaszt = 1;
-                    karad.JatMagusFeltolt(karakternev.Text, "Mágus", fegyvervalaszto.Items[fegyvervalaszto.Items.IndexOf(fegyvervalaszto.SelectedItem)].ToString());
+                    karad.JatMagusFeltolt(karakternev.Text, "Mágus", fegyvervalaszto.Items[fegyvervalaszto.Items.IndexOf(fegyvervalaszto.SelectedItem)].ToString(), keszkep);
                     Harcter harcter = Harcter.getInstance();
                     harcter.AblakMegjelenit();
 
@@ -99,9 +117,11 @@ namespace Raetreon
             {
                 try
                 {
+                    string eredetikep = karakterkep.Source.ToString();
+                    string keszkep = eredetikep.Remove(0, 41);
                     string fegyver = fegyvervalaszto.Items[fegyvervalaszto.Items.IndexOf(fegyvervalaszto.SelectedItem)].ToString();
                     karakterek.kivantkaszt = 2;
-                    karad.JatIjaszFeltolt(karakternev.Text, "Íjász", fegyvervalaszto.Items[fegyvervalaszto.Items.IndexOf(fegyvervalaszto.SelectedItem)].ToString());
+                    karad.JatIjaszFeltolt(karakternev.Text, "Íjász", fegyvervalaszto.Items[fegyvervalaszto.Items.IndexOf(fegyvervalaszto.SelectedItem)].ToString(), keszkep);
                     Harcter harcter = Harcter.getInstance();
                     harcter.AblakMegjelenit();
 
@@ -131,6 +151,9 @@ namespace Raetreon
                 {
                     fegyvervalaszto.Items.Add(khf[i].nev);
                 }
+                KepKirak(harcoskepek[0]);
+                osszkep = harcoskepek;
+                szamlalo = 0;
             }
             else if (kasztvalaszto.Items.IndexOf(kasztvalaszto.SelectedItem) == 1)
             {
@@ -142,6 +165,10 @@ namespace Raetreon
                 {
                     fegyvervalaszto.Items.Add(magf[i].nev);
                 }
+                KepKirak(maguskepek[0]);
+                osszkep = maguskepek;
+                szamlalo = 0;
+                
             }
             else if (kasztvalaszto.Items.IndexOf(kasztvalaszto.SelectedItem) == 2)
             {
@@ -154,10 +181,42 @@ namespace Raetreon
                 {
                     fegyvervalaszto.Items.Add(tavf[i].nev);
                 }
+                KepKirak(ijaszkepek[0]);
+                osszkep = ijaszkepek;
+                szamlalo = 0;
             }
             else
             {
                 MessageBox.Show("Válassz kasztot!");
+            }
+        }
+
+        private void bnyil_Click(object sender, RoutedEventArgs e)
+        {
+            if (szamlalo > 0)
+            {
+                szamlalo--;
+                KepKirak(osszkep[szamlalo]);                
+            }
+            else
+            {
+                szamlalo = osszkep.Count-1;
+                KepKirak(osszkep[szamlalo]);
+            }
+            
+        }
+
+        private void jnyil_Click(object sender, RoutedEventArgs e)
+        {
+            if (szamlalo < osszkep.Count-1)
+            {
+                szamlalo++;
+                KepKirak(osszkep[szamlalo]);                
+            }
+            else
+            {
+                szamlalo = 0;
+                KepKirak(osszkep[szamlalo]);
             }
         }
     }

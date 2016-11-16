@@ -23,6 +23,7 @@ namespace Raetreon
             List<string> karakternevek = new List<string>();
             List<string> kasztok = new List<string>();
             List<string> fegyverek = new List<string>();
+            List<string> kepek = new List<string>();
 
             string connectionString = "Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};" + "DBQ=" + Environment.CurrentDirectory + @"\Fajlok\DB\jatekosadatbazis.xlsx" + ";ReadOnly=0;";
 
@@ -45,6 +46,7 @@ namespace Raetreon
                         karakternevek.Add((string)reader[0]);
                         kasztok.Add((string)reader[1]);
                         fegyverek.Add((string)reader[2]);
+                        kepek.Add((string)reader[3]);
                     }
                     reader.Close();
 
@@ -61,7 +63,7 @@ namespace Raetreon
                     ujharcos.nev = karakternevek[i];
                     ujharcos.maxeletero = 1000;
                     ujharcos.eletero = 1000;
-                    ujharcos.kep = "Images/Karakterek/harcos1.png";
+                    ujharcos.kep = kepek[i];
                     for (int j = 0; j < fegyverbazis.Count; j++)
                     {
                         if (fegyverek[i] == fegyverbazis[j].nev)
@@ -80,6 +82,7 @@ namespace Raetreon
             List<string> karakternevek = new List<string>();
             List<string> kasztok = new List<string>();
             List<string> fegyverek = new List<string>();
+            List<string> kepek = new List<string>();
 
             string connectionString = "Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};" + "DBQ=" + Environment.CurrentDirectory + @"\Fajlok\DB\jatekosadatbazis.xlsx" + ";ReadOnly=0;";
 
@@ -102,6 +105,7 @@ namespace Raetreon
                         karakternevek.Add((string)reader[0]);
                         kasztok.Add((string)reader[1]);
                         fegyverek.Add((string)reader[2]);
+                        kepek.Add((string)reader[3]);
                     }
                     reader.Close();
 
@@ -118,7 +122,7 @@ namespace Raetreon
                     ujmagus.nev = karakternevek[i];
                     ujmagus.maxeletero = 1000;
                     ujmagus.eletero = 1000;
-                    ujmagus.kep = "Images/Karakterek/magus1.png";
+                    ujmagus.kep = kepek[i];
                     for (int j = 0; j < fegyverbazis.Count; j++)
                     {
                         if (fegyverek[i] == fegyverbazis[j].nev)
@@ -136,6 +140,7 @@ namespace Raetreon
             List<string> karakternevek = new List<string>();
             List<string> kasztok = new List<string>();
             List<string> fegyverek = new List<string>();
+            List<string> kepek = new List<string>();
 
             string connectionString = "Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};" + "DBQ=" + Environment.CurrentDirectory + @"\Fajlok\DB\jatekosadatbazis.xlsx" + ";ReadOnly=0;";
 
@@ -158,6 +163,7 @@ namespace Raetreon
                         karakternevek.Add((string)reader[0]);
                         kasztok.Add((string)reader[1]);
                         fegyverek.Add((string)reader[2]);
+                        kepek.Add((string)reader[3]);
                     }
                     reader.Close();
 
@@ -174,7 +180,7 @@ namespace Raetreon
                     ujijasz.nev = karakternevek[i];
                     ujijasz.maxeletero = 1000;
                     ujijasz.eletero = 1000;
-                    ujijasz.kep = "Images/Karakterek/ijasz0.png";
+                    ujijasz.kep = kepek[i];
                     for (int j = 0; j < fegyverbazis.Count; j++)
                     {
                         if (fegyverek[i] == fegyverbazis[j].nev)
@@ -187,7 +193,7 @@ namespace Raetreon
             }
         }
 
-        public void JatHarcosFeltolt(string nev, string kaszt, string fegyver)
+        public void JatHarcosFeltolt(string nev, string kaszt, string fegyver, string kep)
         {
             KarakterRaktar kar = KarakterRaktar.getInstance();
 
@@ -195,15 +201,16 @@ namespace Raetreon
 
             OdbcConnection con = new OdbcConnection(connectionString);
             con.Open();
-            string query = "insert into [JatHarcos$] (Nev,Kaszt,Fegyver) values (?,?,?)";
+            string query = "insert into [JatHarcos$] (Nev,Kaszt,Fegyver,Kep) values (?,?,?,?)";
             OdbcCommand cmd = new OdbcCommand(query, con);
             cmd.Parameters.AddWithValue("?", nev);
             cmd.Parameters.AddWithValue("?", kaszt);
             cmd.Parameters.AddWithValue("?", fegyver);
+            cmd.Parameters.AddWithValue("?", kep);
             cmd.ExecuteNonQuery();// has error
             con.Close();
         }
-        public void JatMagusFeltolt(string nev, string kaszt, string fegyver)
+        public void JatMagusFeltolt(string nev, string kaszt, string fegyver, string kep)
         {
             KarakterRaktar kar = KarakterRaktar.getInstance();
 
@@ -211,15 +218,16 @@ namespace Raetreon
 
             OdbcConnection con = new OdbcConnection(connectionString);
             con.Open();
-            string query = "insert into [JatMagus$] (Nev,Kaszt,Fegyver) values (?,?,?)";
+            string query = "insert into [JatMagus$] (Nev,Kaszt,Fegyver,Kep) values (?,?,?,?)";
             OdbcCommand cmd = new OdbcCommand(query, con);
             cmd.Parameters.AddWithValue("?", nev);
             cmd.Parameters.AddWithValue("?", kaszt);
             cmd.Parameters.AddWithValue("?", fegyver);
+            cmd.Parameters.AddWithValue("?", kep);
             cmd.ExecuteNonQuery();// has error
             con.Close();
         }
-        public void JatIjaszFeltolt(string nev, string kaszt, string fegyver)
+        public void JatIjaszFeltolt(string nev, string kaszt, string fegyver, string kep)
         {
             KarakterRaktar kar = KarakterRaktar.getInstance();
 
@@ -227,11 +235,12 @@ namespace Raetreon
 
             OdbcConnection con = new OdbcConnection(connectionString);
             con.Open();
-            string query = "insert into [JatIjasz$] (Nev,Kaszt,Fegyver) values (?,?,?)";
+            string query = "insert into [JatIjasz$] (Nev,Kaszt,Fegyver,Kep) values (?,?,?,?)";
             OdbcCommand cmd = new OdbcCommand(query, con);
             cmd.Parameters.AddWithValue("?", nev);
             cmd.Parameters.AddWithValue("?", kaszt);
             cmd.Parameters.AddWithValue("?", fegyver);
+            cmd.Parameters.AddWithValue("?", kep);
             cmd.ExecuteNonQuery();// has error
             con.Close();
         }

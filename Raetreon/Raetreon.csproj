@@ -62,6 +62,7 @@
     <Compile Include="Database\EllensegAdatbazis.cs" />
     <Compile Include="Database\FegyverAdatbazis.cs" />
     <Compile Include="Database\KarakterAdatbazis.cs" />
+    <Compile Include="Database\KepAdatbazis.cs" />
     <Compile Include="Ellensegek\Ellensegek.cs" />
     <Compile Include="Harcter.xaml.cs">
       <DependentUpon>Harcter.xaml</DependentUpon>
@@ -161,7 +162,12 @@
   <ItemGroup>
     <Resource Include="Images\Karakterek\magus1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Components\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Components\arrow2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

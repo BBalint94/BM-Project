@@ -6,9 +6,17 @@
         <StackPanel Orientation="Vertical">
             <TextBlock Text="Új karakter létrehozása" FontFamily="Andalus" FontSize="40" HorizontalAlignment="Center" Margin="30"/>
             <Image x:Name="karakterkep" Height="250" Width="200"/>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="bnyil" Content="-" FontSize="20" Width="40" Height="40" Margin="5" />
-                <Button x:Name="jnyil" Content="+" FontSize="20" Width="40" Height="40" Margin="5"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">               
+                <Button x:Name="bnyil" Background="Transparent" BorderBrush="Transparent" Margin="0 0 20 0" Click="bnyil_Click">
+                    <StackPanel>
+                        <Image Source="Images/Components/arrow.png" Width="100" Margin="10"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="jnyil" Background="Transparent" BorderBrush="Transparent" Margin="20 0 0 0" Click="jnyil_Click">
+                    <StackPanel>
+                        <Image Source="Images/Components/arrow2.png" Width="100"/>
+                    </StackPanel>
+                </Button>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock Text="Válassz kasztot!:" FontFamily="Andalus" FontSize="20" Margin="10"/>
