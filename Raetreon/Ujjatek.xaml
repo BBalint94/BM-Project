@@ -3,6 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Ujjatek" Height="700" Width="1000">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/Background/karaktervalasztas.jpeg"/>
+        </Grid.Background>
         <StackPanel Orientation="Vertical">
             <TextBlock Text="Új karakter létrehozása" FontFamily="Andalus" FontSize="40" HorizontalAlignment="Center" Margin="30"/>
             <Image x:Name="karakterkep" Height="250" Width="200"/>

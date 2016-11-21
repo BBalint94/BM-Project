@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:Raetreon"
         mc:Ignorable="d"
         Title="Harcter" Height="700" Width="1000">
-    <Grid>        
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/Background/csateter.jpeg"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="0.3*"/>

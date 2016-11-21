@@ -143,7 +143,8 @@ namespace Raetreon
                 ellensegeletero.Content = ellenseg.eletero;
                 ellenkasztja.Content = ellenseg.kaszt;
                 ellenfegyvere.Content = ellenseg.ellenfegyver.nev;
-                ellenseg.kep = ellensegek[ellensegek.Count - 1].kep;
+                //ellenseg.kep = ellensegek[ellensegek.Count - 1].kep;
+                ellenseg.kep = "Images/Ellenseg/ellenseg3.png";
                 EllenKepKirak(ellenseg.kep);
             }            
             else throw new Exception("Hiba");
