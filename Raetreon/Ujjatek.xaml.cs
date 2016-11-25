@@ -56,7 +56,7 @@ namespace Raetreon
                 kasztvalaszto.Items.Add("Mágus");
                 kasztvalaszto.Items.Add("Íjász");
             }            
-            this.Show();            
+            this.Show();                        
         }
 
         public void KepKirak(string cim)
@@ -139,7 +139,7 @@ namespace Raetreon
     
 
         private void kivalaszt_kaszt_Click(object sender, RoutedEventArgs e)
-        {
+        {            
             int tartszam = fegyvervalaszto.Items.Count;
             if (kasztvalaszto.Items.IndexOf(kasztvalaszto.SelectedItem) == 0)
             {

@@ -112,5 +112,37 @@ namespace Raetreon
             int sebzes = rnd.Next(0, fegyver.sebzes + 1);
             ellenseg.eletero -= sebzes;
         }
+
+        public void Vedekez(Karakter karakterunk, Fegyver fegyver)
+        {
+            int sebzes = rnd.Next(0, fegyver.sebzes + 1);
+            int szerencse = rnd.Next(0, 100);
+            int pajzs;
+            int ujsebzes;            
+            if(szerencse>=0 && szerencse <= 25)
+            {
+                pajzs = 0;
+                ujsebzes = sebzes - pajzs;
+                karakterunk.eletero -= ujsebzes;
+            }
+            else if (szerencse>=25 && szerencse <= 50)
+            {
+                pajzs = sebzes/4;
+                ujsebzes = sebzes - pajzs;
+                karakterunk.eletero -= ujsebzes;
+            }
+            else if(szerencse>=50 && szerencse <= 75)
+            {
+                pajzs = sebzes / 2;
+                ujsebzes = sebzes - pajzs;
+                karakterunk.eletero -= ujsebzes;
+            }
+            else if(szerencse>=75 && szerencse < 100)
+            {
+                pajzs = sebzes;
+                ujsebzes = sebzes - pajzs;
+                karakterunk.eletero -= ujsebzes;
+            }
+        }
     }
 }

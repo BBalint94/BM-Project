@@ -273,6 +273,130 @@ namespace Raetreon
             else throw new Exception("Nincs játékos!");
         }
 
+        public void Vedekezes()
+        {
+            int helete;
+            int heletu;
+            int eelete;
+            int eeletu;
+            int szenv;
+            int okoz;
+            if (harcosunk != null)
+            {
+                if (ellenseg != null)
+                {
+                    helete = harcosunk.eletero;
+                    eelete = ellenseg.eletero;
+                    harcosunk.Vedekez(harcosunk, ellenseg.ellenfegyver);
+                    ellenseg.Tamad(harcosunk, ellenseg.ellenfegyver);
+                    heletu = harcosunk.eletero;
+                    eeletu = ellenseg.eletero;
+                    okoz = eelete - eeletu;
+                    szenv = helete - heletu;
+                    jatekoseletero.Content = harcosunk.eletero;
+                    ellensegeletero.Content = ellenseg.eletero;
+                    hirnok.update(korokszama, okoz, szenv, vegevane);
+                    korokszama++;
+                    if (harcosunk.harckeptelen == true && ellenseg.harckeptelen == false)
+                    {
+                        MessageBox.Show("Vesztettél!");
+                        vegevane = true;
+                        hirnok.update(korokszama, okoz, szenv, vegevane);
+                    }
+                    if (ellenseg.harckeptelen == true && harcosunk.harckeptelen == false)
+                    {
+                        MessageBox.Show("Nyertél!");
+                        vegevane = true;
+                        hirnok.update(korokszama, okoz, szenv, vegevane);
+                    }
+                    if (harcosunk.harckeptelen == true && ellenseg.harckeptelen == true)
+                    {
+                        MessageBox.Show("Döntetlen!");
+                        vegevane = true;
+                        hirnok.update(korokszama, okoz, szenv, vegevane);
+                    }
+                }
+                else throw new Exception("Nincs ellenfél!");
+            }
+            else if (magusunk != null)
+            {
+                if (ellenseg != null)
+                {
+                    helete = magusunk.eletero;
+                    eelete = ellenseg.eletero;
+                    magusunk.Tamad(magusunk, ellenseg.ellenfegyver);
+                    ellenseg.Tamad(magusunk, ellenseg.ellenfegyver);
+                    heletu = magusunk.eletero;
+                    eeletu = ellenseg.eletero;
+                    okoz = eelete - eeletu;
+                    szenv = helete - heletu;
+                    jatekoseletero.Content = magusunk.eletero;
+                    ellensegeletero.Content = ellenseg.eletero;
+                    hirnok.update(korokszama, okoz, szenv, vegevane);
+                    korokszama++;
+                    if (magusunk.harckeptelen == true && ellenseg.harckeptelen == false)
+                    {
+                        MessageBox.Show("Vesztettél!");
+                        vegevane = true;
+                        hirnok.update(korokszama, okoz, szenv, vegevane);
+                    }
+                    if (ellenseg.harckeptelen == true && magusunk.harckeptelen == false)
+                    {
+                        MessageBox.Show("Nyertél!");
+                        vegevane = true;
+                        hirnok.update(korokszama, okoz, szenv, vegevane);
+                    }
+                    if (magusunk.harckeptelen == true && ellenseg.harckeptelen == true)
+                    {
+                        MessageBox.Show("Döntetlen!");
+                        vegevane = true;
+                        hirnok.update(korokszama, okoz, szenv, vegevane);
+                    }
+                }
+                else throw new Exception("Nincs ellenfél!");
+
+            }
+            else if (ijaszunk != null)
+            {
+                if (ellenseg != null)
+                {
+                    helete = ijaszunk.eletero;
+                    eelete = ellenseg.eletero;
+                    ijaszunk.Tamad(ijaszunk, ellenseg.ellenfegyver);
+                    ellenseg.Tamad(ijaszunk, ellenseg.ellenfegyver);
+                    heletu = ijaszunk.eletero;
+                    eeletu = ellenseg.eletero;
+                    okoz = eelete - eeletu;
+                    szenv = helete - heletu;
+                    jatekoseletero.Content = ijaszunk.eletero;
+                    ellensegeletero.Content = ellenseg.eletero;
+                    hirnok.update(korokszama, okoz, szenv, vegevane);
+                    korokszama++;
+                    if (ijaszunk.harckeptelen == true && ellenseg.harckeptelen == false)
+                    {
+                        MessageBox.Show("Vesztettél!");
+                        vegevane = true;
+                        hirnok.update(korokszama, okoz, szenv, vegevane);
+                    }
+                    if (ellenseg.harckeptelen == true && ijaszunk.harckeptelen == false)
+                    {
+                        MessageBox.Show("Nyertél!");
+                        vegevane = true;
+                        hirnok.update(korokszama, okoz, szenv, vegevane);
+                    }
+                    if (ijaszunk.harckeptelen == true && ellenseg.harckeptelen == true)
+                    {
+                        MessageBox.Show("Döntetlen!");
+                        vegevane = true;
+                        hirnok.update(korokszama, okoz, szenv, vegevane);
+                    }
+                }
+                else throw new Exception("Nincs ellenfél!");
+
+            }
+            else throw new Exception("Nincs játékos!");
+        }
+
         private void tamadas_Click(object sender, RoutedEventArgs e)
         {
             if (vegevane == true)
@@ -290,5 +414,16 @@ namespace Raetreon
             Application.Current.Shutdown();
         }
 
+        private void vedekezes_Click(object sender, RoutedEventArgs e)
+        {
+            if(vegevane == true)
+            {
+                MessageBox.Show("A játéknak vége! Kattints a kilépésre!");
+            }
+            else
+            {
+                Vedekezes();
+            }
+        }
     }
 }
