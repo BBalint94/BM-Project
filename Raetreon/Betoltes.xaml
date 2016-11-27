@@ -3,10 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Betoltes" Height="700" Width="1000">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/Background/karaktervalasztas.jpeg"/>
+        </Grid.Background>
         <StackPanel Orientation="Vertical">
             <TextBlock Text="Karakter betöltése" FontFamily="Andalus" FontSize="40" HorizontalAlignment="Center" Margin="30"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <ComboBox x:Name="kaszt_valaszt" Width="150" Height="30" Margin="10"/>
+                <Button x:Name="kasztvalbutton" Content="Kaszt kiválasztása" FontFamily="Andalus" FontSize="20" Width="170" Height="40" Margin="10" Click="kasztvalbutton_Click"/>
+            </StackPanel>
             <ComboBox x:Name="karakter_valaszto" Width="400" Height="30" Margin="10"/>
-            <Button x:Name="kivalaszt" Content="Kiválaszt" FontFamily="Andalus" FontSize="20" Width="100" Height="40" Margin="10"/>
+            <Button x:Name="kivalaszt" Content="Kiválaszt" FontFamily="Andalus" FontSize="20" Width="100" Height="40" Margin="10" Click="kivalaszt_Click"/>
             <Button x:Name="visszalep" Content="Vissza" FontFamily="Andalus" FontSize="20" Width="100" Height="40" Margin="10" Click="visszalep_Click"/>
         </StackPanel>
     </Grid>

@@ -64,6 +64,7 @@
     <Compile Include="Database\KarakterAdatbazis.cs" />
     <Compile Include="Database\KepAdatbazis.cs" />
     <Compile Include="Ellensegek\Ellensegek.cs" />
+    <Compile Include="GlobalClass.cs" />
     <Compile Include="Harcter.xaml.cs">
       <DependentUpon>Harcter.xaml</DependentUpon>
     </Compile>

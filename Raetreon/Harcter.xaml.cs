@@ -32,11 +32,15 @@ namespace Raetreon
         static KarakterAdatbazis karad = KarakterAdatbazis.getInstance();
         static EllensegRaktar ellensegek = EllensegRaktar.getInstance();
         static EllensegAdatbazis elladatb = EllensegAdatbazis.getInstance();
+        static GlobalClass gc = GlobalClass.getInstance();
         static Random rnd = new Random();
         static Harcos harcosunk;
+        static Harcos korharcos = gc.korabbiharcos;       
         static Ellenseg ellenseg;
-        static Magus magusunk;        
-        static Ijasz ijaszunk;        
+        static Magus magusunk;
+        static Magus kormagus = gc.korabbimagus;        
+        static Ijasz ijaszunk;
+        static Ijasz korijasz = gc.korabbiijasz;        
         static bool vegevane = false;
         static Esemenykozlo ek = new Esemenykozlo();
         static Hirdeto hirnok = new Hirdeto("Hírnök");
@@ -51,7 +55,13 @@ namespace Raetreon
         {
             InitializeComponent();
             this.Show();
-            JatekosBetolt();
+            if(korharcos.nev !=null || kormagus.nev!=null || korijasz.nev!= null)
+            {
+                KorabbiJatekosBetolt();
+            }else
+            {
+                JatekosBetolt();
+            }            
             EllensegBetolt();
         }
 
@@ -128,6 +138,70 @@ namespace Raetreon
                 jatkasztja.Content = "Íjász";
                 jatfegyvere.Content = ijaszunk.ijaszfegyver.nev;
                 KepKirak(ijaszunk.kep);
+            }
+            else throw new Exception("Hiba");
+
+        }
+        public void KorabbiJatekosBetolt()
+        {
+            if (karakter.kivantkaszt == 0)
+            {
+                //List<Harcos> lekharcosok = karad.JatHarcosLekerdez();
+                //Harcos jharcos = korharcos;
+                /*jharcos.nev = lekharcosok[lekharcosok.Count - 1].nev;
+                jharcos.maxeletero = lekharcosok[lekharcosok.Count - 1].maxeletero;
+                jharcos.eletero = lekharcosok[lekharcosok.Count - 1].eletero;
+                jharcos.harcosfegyver = lekharcosok[lekharcosok.Count - 1].harcosfegyver;
+                jharcos.kep = lekharcosok[lekharcosok.Count - 1].kep; */
+                harcosunk = korharcos;
+            }
+            else if (karakter.kivantkaszt == 1)
+            {
+                //List<Magus> lekmagusok = karad.JatMagusLekerdez();
+                //Magus jmagus = GlobalClass.korabbimagus;
+                /*jmagus.nev = lekmagusok[lekmagusok.Count - 1].nev;
+                jmagus.maxeletero = lekmagusok[lekmagusok.Count - 1].maxeletero;
+                jmagus.eletero = lekmagusok[lekmagusok.Count - 1].eletero;
+                jmagus.magusfegyver = lekmagusok[lekmagusok.Count - 1].magusfegyver;
+                jmagus.kep = lekmagusok[lekmagusok.Count - 1].kep; */
+                magusunk = kormagus;
+            }
+            else if (karakter.kivantkaszt == 2)
+            {
+                //List<Ijasz> lekijaszok = karad.JatIjaszLekerdez();
+                //Ijasz jijasz = GlobalClass.korabbiijasz;
+                /*jijasz.nev = lekijaszok[lekijaszok.Count - 1].nev;
+                jijasz.maxeletero = lekijaszok[lekijaszok.Count - 1].maxeletero;
+                jijasz.eletero = lekijaszok[lekijaszok.Count - 1].eletero;
+                jijasz.ijaszfegyver = lekijaszok[lekijaszok.Count - 1].ijaszfegyver;
+                jijasz.kep = lekijaszok[lekijaszok.Count - 1].kep; */
+                ijaszunk = korijasz;
+            }
+            else throw new Exception("Nincs ilyen kaszt!");
+
+            if (korharcos.nev != null)
+            {
+                karakternev.Content = korharcos.nev;
+                jatekoseletero.Content = korharcos.eletero;
+                jatkasztja.Content = "Harcos";
+                jatfegyvere.Content = korharcos.harcosfegyver.nev;
+                KepKirak(korharcos.kep);
+            }
+            else if (kormagus.nev != null)
+            {
+                karakternev.Content = kormagus.nev;
+                jatekoseletero.Content = kormagus.eletero;
+                jatkasztja.Content = "Mágus";
+                jatfegyvere.Content = kormagus.magusfegyver.nev.ToString();
+                KepKirak(kormagus.kep);
+            }
+            else if (korijasz.nev != null)
+            {
+                karakternev.Content = korijasz.nev;
+                jatekoseletero.Content = korijasz.eletero;
+                jatkasztja.Content = "Íjász";
+                jatfegyvere.Content = korijasz.ijaszfegyver.nev;
+                KepKirak(korijasz.kep);
             }
             else throw new Exception("Hiba");
 
