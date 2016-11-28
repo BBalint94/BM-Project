@@ -95,3 +95,24 @@ C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\Raetreon\obj\Debug\Harct
 C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\Raetreon\obj\Debug\Raetreon.g.resources
 C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\Raetreon\obj\Debug\Raetreon.Properties.Resources.resources
 C:\Users\Acer\Desktop\School\RFT Gyak\BM-Project-master\Raetreon\obj\Debug\Raetreon.csproj.GenerateResource.Cache
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\bin\Debug\Raetreon.exe.config
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\Raetreon.exe
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\Raetreon.pdb
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\bin\Debug\Raetreon.exe
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\bin\Debug\Raetreon.pdb
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\Raetreon.csprojResolveAssemblyReference.cache
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\Betoltes.baml
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\MainWindow.baml
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\Ujjatek.baml
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\App.baml
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\Betoltes.g.cs
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\Harcter.g.cs
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\MainWindow.g.cs
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\Ujjatek.g.cs
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\App.g.cs
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\Raetreon_MarkupCompile.cache
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\Raetreon_MarkupCompile.lref
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\Harcter.baml
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\Raetreon.g.resources
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\Raetreon.Properties.Resources.resources
+E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\Raetreon.csproj.GenerateResource.Cache

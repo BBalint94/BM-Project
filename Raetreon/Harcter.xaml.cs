@@ -152,7 +152,7 @@ namespace Raetreon
                 jharcos.maxeletero = lekharcosok[lekharcosok.Count - 1].maxeletero;
                 jharcos.eletero = lekharcosok[lekharcosok.Count - 1].eletero;
                 jharcos.harcosfegyver = lekharcosok[lekharcosok.Count - 1].harcosfegyver;
-                jharcos.kep = lekharcosok[lekharcosok.Count - 1].kep; */
+                jharcos.kep = lekharcosok[lekharcosok.Count - 1].kep; */                
                 harcosunk = korharcos;
             }
             else if (karakter.kivantkaszt == 1)
@@ -184,7 +184,7 @@ namespace Raetreon
                 karakternev.Content = korharcos.nev;
                 jatekoseletero.Content = korharcos.eletero;
                 jatkasztja.Content = "Harcos";
-                jatfegyvere.Content = korharcos.harcosfegyver.nev;
+                jatfegyvere.Content = korharcos.harcosfegyver.nev.ToString();
                 KepKirak(korharcos.kep);
             }
             else if (kormagus.nev != null)
@@ -200,7 +200,7 @@ namespace Raetreon
                 karakternev.Content = korijasz.nev;
                 jatekoseletero.Content = korijasz.eletero;
                 jatkasztja.Content = "Íjász";
-                jatfegyvere.Content = korijasz.ijaszfegyver.nev;
+                jatfegyvere.Content = korijasz.ijaszfegyver.nev.ToString();
                 KepKirak(korijasz.kep);
             }
             else throw new Exception("Hiba");

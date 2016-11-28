@@ -115,6 +115,7 @@ namespace Raetreon
                 {
                     
                     gc.korabbiharcos = h_karakterek[karakter_valaszto.Items.IndexOf(karakter_valaszto.SelectedItem)];
+                    karakterek.kivantkaszt = 0;
                     Harcter harcter = Harcter.getInstance();
                     harcter.AblakMegjelenit();
                 }
@@ -128,6 +129,7 @@ namespace Raetreon
                 try
                 {                    
                     gc.korabbimagus = m_karakterek[karakter_valaszto.Items.IndexOf(karakter_valaszto.SelectedItem)];
+                    karakterek.kivantkaszt = 1;
                     Harcter harcter = Harcter.getInstance();
                     harcter.AblakMegjelenit();
 
@@ -142,6 +144,7 @@ namespace Raetreon
                 try
                 {                   
                     gc.korabbiijasz = i_karakterek[karakter_valaszto.Items.IndexOf(karakter_valaszto.SelectedItem)];
+                    karakterek.kivantkaszt = 2;
                     Harcter harcter = Harcter.getInstance();
                     harcter.AblakMegjelenit();
 
