@@ -4,7 +4,7 @@
         Title="MainWindow" Height="700" Width="1000">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Images/Background/hatter.jpeg"/>
+            <ImageBrush ImageSource="Images/Background/Háttér.jpeg"/>
         </Grid.Background>
         <StackPanel Orientation="Vertical">
             <Button x:Name="ujjatek" Content="Új játék" FontFamily="Andalus" FontSize="30" Width="120" Height="50" Margin=" 0 250 0 20"  Click="ujjatek_Click"/>
