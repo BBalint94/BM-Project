@@ -32,6 +32,8 @@ namespace Raetreon
         static KarakterAdatbazis karad = KarakterAdatbazis.getInstance();
         static EllensegRaktar ellensegek = EllensegRaktar.getInstance();
         static EllensegAdatbazis elladatb = EllensegAdatbazis.getInstance();
+        static KerdesAdatbazis kerdadatb = KerdesAdatbazis.getInstance();
+        static KerdesRaktar kerdrakt = KerdesRaktar.getInstance();        
         static GlobalClass gc = GlobalClass.getInstance();
         static Random rnd = new Random();
         static Harcos harcosunk;
@@ -145,36 +147,15 @@ namespace Raetreon
         public void KorabbiJatekosBetolt()
         {
             if (karakter.kivantkaszt == 0)
-            {
-                //List<Harcos> lekharcosok = karad.JatHarcosLekerdez();
-                //Harcos jharcos = korharcos;
-                /*jharcos.nev = lekharcosok[lekharcosok.Count - 1].nev;
-                jharcos.maxeletero = lekharcosok[lekharcosok.Count - 1].maxeletero;
-                jharcos.eletero = lekharcosok[lekharcosok.Count - 1].eletero;
-                jharcos.harcosfegyver = lekharcosok[lekharcosok.Count - 1].harcosfegyver;
-                jharcos.kep = lekharcosok[lekharcosok.Count - 1].kep; */                
+            {                                
                 harcosunk = korharcos;
             }
             else if (karakter.kivantkaszt == 1)
-            {
-                //List<Magus> lekmagusok = karad.JatMagusLekerdez();
-                //Magus jmagus = GlobalClass.korabbimagus;
-                /*jmagus.nev = lekmagusok[lekmagusok.Count - 1].nev;
-                jmagus.maxeletero = lekmagusok[lekmagusok.Count - 1].maxeletero;
-                jmagus.eletero = lekmagusok[lekmagusok.Count - 1].eletero;
-                jmagus.magusfegyver = lekmagusok[lekmagusok.Count - 1].magusfegyver;
-                jmagus.kep = lekmagusok[lekmagusok.Count - 1].kep; */
+            {                
                 magusunk = kormagus;
             }
             else if (karakter.kivantkaszt == 2)
-            {
-                //List<Ijasz> lekijaszok = karad.JatIjaszLekerdez();
-                //Ijasz jijasz = GlobalClass.korabbiijasz;
-                /*jijasz.nev = lekijaszok[lekijaszok.Count - 1].nev;
-                jijasz.maxeletero = lekijaszok[lekijaszok.Count - 1].maxeletero;
-                jijasz.eletero = lekijaszok[lekijaszok.Count - 1].eletero;
-                jijasz.ijaszfegyver = lekijaszok[lekijaszok.Count - 1].ijaszfegyver;
-                jijasz.kep = lekijaszok[lekijaszok.Count - 1].kep; */
+            {                
                 ijaszunk = korijasz;
             }
             else throw new Exception("Nincs ilyen kaszt!");
@@ -223,7 +204,7 @@ namespace Raetreon
             }            
             else throw new Exception("Hiba");
         }
-        public void Harc()
+        public void Tamadunk()
         {
             int helete;
             int heletu;
@@ -237,8 +218,7 @@ namespace Raetreon
                 {
                     helete = harcosunk.eletero;
                     eelete = ellenseg.eletero;
-                    harcosunk.Tamad(ellenseg, harcosunk.harcosfegyver);
-                    ellenseg.Tamad(harcosunk, ellenseg.ellenfegyver);
+                    harcosunk.Tamad(ellenseg, harcosunk.harcosfegyver);                    
                     heletu = harcosunk.eletero;
                     eeletu = ellenseg.eletero;
                     okoz = eelete - eeletu;
@@ -274,8 +254,7 @@ namespace Raetreon
                 {
                     helete = magusunk.eletero;
                     eelete = ellenseg.eletero;
-                    magusunk.Tamad(ellenseg, magusunk.magusfegyver);
-                    ellenseg.Tamad(magusunk, ellenseg.ellenfegyver);
+                    magusunk.Tamad(ellenseg, magusunk.magusfegyver);                    
                     heletu = magusunk.eletero;
                     eeletu = ellenseg.eletero;
                     okoz = eelete - eeletu;
@@ -312,8 +291,7 @@ namespace Raetreon
                 {
                     helete = ijaszunk.eletero;
                     eelete = ellenseg.eletero;
-                    ijaszunk.Tamad(ellenseg, ijaszunk.ijaszfegyver);
-                    ellenseg.Tamad(ijaszunk, ellenseg.ellenfegyver);
+                    ijaszunk.Tamad(ellenseg, ijaszunk.ijaszfegyver);                   
                     heletu = ijaszunk.eletero;
                     eeletu = ellenseg.eletero;
                     okoz = eelete - eeletu;
@@ -347,7 +325,7 @@ namespace Raetreon
             else throw new Exception("Nincs játékos!");
         }
 
-        public void Vedekezes()
+        public void Tamadnak()
         {
             int helete;
             int heletu;
@@ -360,8 +338,7 @@ namespace Raetreon
                 if (ellenseg != null)
                 {
                     helete = harcosunk.eletero;
-                    eelete = ellenseg.eletero;
-                    harcosunk.Vedekez(harcosunk, ellenseg.ellenfegyver);
+                    eelete = ellenseg.eletero;                    
                     ellenseg.Tamad(harcosunk, ellenseg.ellenfegyver);
                     heletu = harcosunk.eletero;
                     eeletu = ellenseg.eletero;
@@ -397,8 +374,7 @@ namespace Raetreon
                 if (ellenseg != null)
                 {
                     helete = magusunk.eletero;
-                    eelete = ellenseg.eletero;
-                    magusunk.Tamad(magusunk, ellenseg.ellenfegyver);
+                    eelete = ellenseg.eletero;                    
                     ellenseg.Tamad(magusunk, ellenseg.ellenfegyver);
                     heletu = magusunk.eletero;
                     eeletu = ellenseg.eletero;
@@ -435,8 +411,7 @@ namespace Raetreon
                 if (ellenseg != null)
                 {
                     helete = ijaszunk.eletero;
-                    eelete = ellenseg.eletero;
-                    ijaszunk.Tamad(ijaszunk, ellenseg.ellenfegyver);
+                    eelete = ellenseg.eletero;                    
                     ellenseg.Tamad(ijaszunk, ellenseg.ellenfegyver);
                     heletu = ijaszunk.eletero;
                     eeletu = ellenseg.eletero;
@@ -479,25 +454,24 @@ namespace Raetreon
             }
             else
             {
-                Harc();
+                kerdrakt.kerdesek = kerdadatb.KerdesLekerdez();
+                kerdrakt.valaszok = kerdadatb.ValaszLekerdez();
+                Kerdesek kerdwindow = new Kerdesek();
+                InitializeComponent();
+                kerdwindow.ShowDialog();
+                if(kerdwindow.DialogResult == true)
+                {
+                    Tamadunk();
+                }else
+                {
+                    Tamadnak();
+                }                
             }
         }
 
         private void kilepes_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
-        }
-
-        private void vedekezes_Click(object sender, RoutedEventArgs e)
-        {
-            if(vegevane == true)
-            {
-                MessageBox.Show("A játéknak vége! Kattints a kilépésre!");
-            }
-            else
-            {
-                Vedekezes();
-            }
-        }
+        }        
     }
 }
