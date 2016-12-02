@@ -193,30 +193,36 @@ namespace Raetreon
 
         private void bnyil_Click(object sender, RoutedEventArgs e)
         {
-            if (szamlalo > 0)
+            if (osszkep != null)
             {
-                szamlalo--;
-                KepKirak(osszkep[szamlalo]);                
-            }
-            else
-            {
-                szamlalo = osszkep.Count-1;
-                KepKirak(osszkep[szamlalo]);
+                if (szamlalo > 0)
+                {
+                    szamlalo--;
+                    KepKirak(osszkep[szamlalo]);
+                }
+                else
+                {
+                    szamlalo = osszkep.Count - 1;
+                    KepKirak(osszkep[szamlalo]);
+                }
             }
             
         }
 
         private void jnyil_Click(object sender, RoutedEventArgs e)
         {
-            if (szamlalo < osszkep.Count-1)
+            if (osszkep != null)
             {
-                szamlalo++;
-                KepKirak(osszkep[szamlalo]);                
-            }
-            else
-            {
-                szamlalo = 0;
-                KepKirak(osszkep[szamlalo]);
+                if (szamlalo < osszkep.Count - 1)
+                {
+                    szamlalo++;
+                    KepKirak(osszkep[szamlalo]);
+                }
+                else
+                {
+                    szamlalo = 0;
+                    KepKirak(osszkep[szamlalo]);
+                }
             }
         }
     }

@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Raetreon"
         mc:Ignorable="d"
-        Title="Kerdesek" Height="400" Width="900">
+        Title="Kerdesek" Height="400" Width="1000">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Images/Background/csateter.jpeg"/>
         </Grid.Background>
         <StackPanel Orientation="Vertical">
-            <TextBlock x:Name="kerdes" Text="Kérdés:" FontSize="30" Margin="30" FontFamily="Andalus"/>
-            <TextBox x:Name="valaszhelye" Width="300" Height="35" Margin="30"/>
-            <Button x:Name="ellenoriz" Content="Ellenőriz" FontSize="20" FontFamily="Andalus" Width="150" Height="50" Margin="30" Click="ellenoriz_Click"/>
+            <TextBlock x:Name="kerdes" Text="Kérdés:" FontSize="25" Margin="30" FontFamily="Andalus" Height="150" TextAlignment="Center"/>
+            <TextBox x:Name="valaszhelye" Width="300" Height="30" Margin="10"/>
+            <Button x:Name="ellenoriz" Content="Ellenőriz" FontSize="20" FontFamily="Andalus" Width="150" Height="50" Margin="10" Click="ellenoriz_Click"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -116,3 +116,5 @@ E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\Harcter.baml
 E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\Raetreon.g.resources
 E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\Raetreon.Properties.Resources.resources
 E:\EKF-PTI\3.félév\BM-Project\Raetreon\obj\Debug\Raetreon.csproj.GenerateResource.Cache
+E:\EKF-PTI\3.félév\RFT gy\BM-Project-master\Raetreon\obj\Debug\Kerdesek.g.cs
+E:\EKF-PTI\3.félév\RFT gy\BM-Project-master\Raetreon\obj\Debug\Kerdesek.baml

@@ -29,6 +29,6 @@
         <Style TargetType="Border" x:Key="esemenyborder">
             <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="BorderThickness" Value="5"/>
-        </Style>
+        </Style>        
     </Application.Resources>
 </Application>

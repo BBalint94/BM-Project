@@ -431,7 +431,7 @@ namespace Raetreon
                     {
                         MessageBox.Show("Nyertél!");
                         vegevane = true;
-                        hirnok.update(korokszama, okoz, szenv, vegevane);
+                        hirnok.update(korokszama, okoz, szenv, vegevane);                        
                     }
                     if (ijaszunk.harckeptelen == true && ellenseg.harckeptelen == true)
                     {

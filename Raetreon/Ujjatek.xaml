@@ -11,14 +11,10 @@
             <Image x:Name="karakterkep" Height="250" Width="200"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">               
                 <Button x:Name="bnyil" Background="Transparent" BorderBrush="Transparent" Margin="0 0 20 0" Click="bnyil_Click">
-                    <StackPanel>
-                        <Image Source="Images/Components/arrow.png" Width="100" Margin="10"/>
-                    </StackPanel>
+                    <Image Source="Images/Components/arrow.png" Width="100" Margin="10"/>                    
                 </Button>
-                <Button x:Name="jnyil" Background="Transparent" BorderBrush="Transparent" Margin="20 0 0 0" Click="jnyil_Click">
-                    <StackPanel>
-                        <Image Source="Images/Components/arrow2.png" Width="100"/>
-                    </StackPanel>
+                <Button x:Name="jnyil" Background="Transparent" BorderBrush="Transparent" Margin="20 0 0 0" Click="jnyil_Click">                   
+                    <Image Source="Images/Components/arrow2.png" Width="100" Margin="10"/>                    
                 </Button>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
