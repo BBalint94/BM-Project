@@ -70,7 +70,7 @@
             <Border Style="{StaticResource esemenyborder}" Height="155">
                 <StackPanel>
                     <TextBlock Text="Események:" Style="{StaticResource alapszoveg}" Margin="15 0 0 0"/>
-                    <TextBox x:Name="esemenyek" IsReadOnly="True" Background="Gray" TextWrapping="Wrap" Height="100" Margin="5"/>
+                    <TextBox x:Name="esemenyek" IsReadOnly="True" Background="Gray" Foreground="White" TextWrapping="Wrap" Height="100" Margin="5"/>
                 </StackPanel>
             </Border>
         </StackPanel>

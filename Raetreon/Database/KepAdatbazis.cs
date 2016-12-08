@@ -113,5 +113,37 @@ namespace Raetreon
                 return kepek;
             }
         }
+
+        public List<string> EllenKepLekerdez()
+        {
+            List<string> kepek = new List<string>();
+
+            string connectionString = "Driver={Microsoft Excel Driver (*.xls, *.xlsx, *.xlsm, *.xlsb)};" + "DBQ=" + Environment.CurrentDirectory + @"\Fajlok\DB\kepadatbazis.xlsx" + ";ReadOnly=0;";
+
+            string queryString =
+                "SELECT * FROM [Ellenfelkepek$]";
+            using (OdbcConnection connection =
+                new OdbcConnection(connectionString))
+            {
+                OdbcCommand command = new OdbcCommand(queryString, connection);
+
+                try
+                {
+                    connection.Open();
+                    OdbcDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        kepek.Add((string)reader[0]);
+                    }
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                return kepek;
+            }
+        }
     }
 }

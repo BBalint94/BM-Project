@@ -33,7 +33,9 @@ namespace Raetreon
         static EllensegRaktar ellensegek = EllensegRaktar.getInstance();
         static EllensegAdatbazis elladatb = EllensegAdatbazis.getInstance();
         static KerdesAdatbazis kerdadatb = KerdesAdatbazis.getInstance();
-        static KerdesRaktar kerdrakt = KerdesRaktar.getInstance();        
+        static KerdesRaktar kerdrakt = KerdesRaktar.getInstance();
+        static KepAdatbazis kepadatb = KepAdatbazis.getInstance();
+        static List<string> ellenkepek = kepadatb.EllenKepLekerdez();
         static GlobalClass gc = GlobalClass.getInstance();
         static Random rnd = new Random();
         static Harcos harcosunk;
@@ -198,8 +200,8 @@ namespace Raetreon
                 ellensegeletero.Content = ellenseg.eletero;
                 ellenkasztja.Content = ellenseg.kaszt;
                 ellenfegyvere.Content = ellenseg.ellenfegyver.nev;
-                //ellenseg.kep = ellensegek[ellensegek.Count - 1].kep;
-                ellenseg.kep = "Images/Ellenseg/ellenseg3.png";
+                ellenseg.kep = ellenkepek[rnd.Next(0,ellenkepek.Count()+1)];
+                //ellenseg.kep = "Images/Ellenseg/golem1.png";
                 EllenKepKirak(ellenseg.kep);
             }            
             else throw new Exception("Hiba");
@@ -480,7 +482,7 @@ namespace Raetreon
             {
                 Harcter ht = Harcter.getInstance();
                 ht.AblakMegjelenit();
-                vegevane = false;
+                vegevane = false;                                
             }else
             {
                 MessageBox.Show("Még nincs vége a harcnak, nem válthatsz ellenfelet!");

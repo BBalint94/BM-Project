@@ -66,7 +66,7 @@ namespace Raetreon
                     ujellenseg.eletero = 1000;
                     ujellenseg.kaszt = "Harcos";
                     ujellenseg.ellenfegyver = khf[rnd.Next(0, khf.Count)];
-                    ujellenseg.kep = kepek[i];
+                    //ujellenseg.kep = kepek[i];
                     er.JatEllensegHozzaad(ujellenseg);
                 }
                 return er.jatellenseg;
