@@ -237,7 +237,7 @@ namespace Raetreon
                     {
                         MessageBox.Show("Nyertél!");
                         vegevane = true;
-                        hirnok.update(korokszama, okoz, szenv, vegevane);
+                        hirnok.update(korokszama, okoz, szenv, vegevane);                        
                     }
                     if (harcosunk.harckeptelen == true && ellenseg.harckeptelen == true)
                     {
@@ -472,6 +472,19 @@ namespace Raetreon
         private void kilepes_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
-        }        
+        }
+
+        private void kovetkezo_Click(object sender, RoutedEventArgs e)
+        {
+            if (vegevane)
+            {
+                Harcter ht = Harcter.getInstance();
+                ht.AblakMegjelenit();
+                vegevane = false;
+            }else
+            {
+                MessageBox.Show("Még nincs vége a harcnak, nem válthatsz ellenfelet!");
+            }
+        }
     }
 }
