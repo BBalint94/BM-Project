@@ -1,46 +1,44 @@
 BM Project : Követelmény specifikáció:
 
-	1. A megrendelő által meghatározott feladat:
+- Jelenlegi helyzet leírása:
 	
-		Egy egyjátékos, körökre osztott harcrendszerű WPF-es játékalkalmazás létrehozása windows operációs rendszerre.
-		
-	2. Követelmények:
+	Az alkalmazás felépítésének tervezése, fontosabb funkciók megvalósításának tervezése, ötletgyűjtés elkezdődött.
+
+- Környezet:
 	
-		- A felhasználó létrehozhasson karaktert, amit használva játszhat.
-		- A létrehozás során meghatározott kasztok közül kelljen egyet választani.
-		- Karakter adatlap készítése, mely tartalmazza a fontosabb adatokat (név, profilkép, életerő, kaszt, felszerelés...stb.)
-		- Tartalmazzon profilképeket, amik közül választania kell a felhasználónak.
-		- A karakter adatainak elmentése adatbázisba.
-		- Legyen lehetőség akár több karakter létrehozására is, de egyszerre csak eggyel lehessen játszani.
-		- A korábban elkészített karakterekkel a korábbi játék folytatása.
-		- Harc során két fél küzdjön meg egymással, az egyik a felhasználó karaktere, a másik pedig a gép által generált véletlenszerűen kiválasztott ellenség.
-		- A harc kimenetelétől függően a játék jutalmazzon, illetve büntessen (játékbeli pénz).
-		- Boltrendszer, a boltban különféle tárgyak vásárlása játékbeli pénzért.
-		- A karakterlap tartalmazza az eddig megnyert és elveszített párbajok számát.
-		- Harchoz szükséges tárgyak:			- közelharci fegyverek (kardok, bárdok, pörölyök...stb.)
-												- távolsági fegyverek (íjak, dobótőrök...stb.)
-												- mágikus fegyverek (varázspálcák, varázsbotok, varázsgömbök...stb.)
-												- védelmi felszerelések (pajzsok, láncingek...stb.)
-												- gyógyító felszerelések (életerőitalok, ételek...stb.)- harchoz szükséges tárgyak:- közelharci fegyverek (kardok, bárdok, pörölyök...stb.)
-												- távolsági fegyverek (íjak, dobótőrök...stb.)
-												- mágikus fegyverek (varázspálcák, varázsbotok, varázsgömbök...stb.)
-												- védelmi felszerelések (pajzsok, láncingek...stb.)
-												- gyógyító felszerelések (életerőitalok, ételek...stb.)
-												
-		- Harc menete: 
-				- két fél harcol egymás ellen, mindkettő rendelkezik egy profilképpel, életerősávval, fegyverrel, gyógyító felszereléssel
-				- a harc egy gomb megnyomásával bonyolódik le, ekkor először támad a karakter és a fegyverének sebzésétől függően megsebzi az ellenfelet, aki veszít az életerejéből, majd megtámadja a felhasználó karakterét.
-				- addig tart a harc, amíg az egyik életerősáv értéke 0-ra nem csökken.
+	A program egy WPF-es játékalkalmazás windows operációs rendszerre. 
+	Az alkalmazás készítése során Visual Studio Community 2015-öt és a Microsoft Office Excel 2007-et használjuk.
+	A működéséhez szükséges Windows 10-es operációs rendszer, vagy régebbi operációs rendszer esetén (Windows 7, 8) a 		Microsoft Office irodai szoftvercsomag feltelepítése.
+
+- Cél (megrendelő elképzelései), legfontosabb funkciók:
 	
-	3. Fejlesztői környezet:
+	Egy elgondolkoztató, fejtörő kérdésekkel ellátott egyjátékos, körökre osztott harcrendszerű játékalkalmazás 			létrehozása. Cél a szórakoztatás és az ismeretek fejlesztése egyben.
+	A felhasználó egy általa létrehozott karakter bőrébe bújva száll szembe különböző ellenségekkel. Minden körben kap egy 		kérdést, amire ha helyesen válaszol megsebzi az ellenfelét,
+	viszont ha a válasza helytelen, akkor ő sebződik. A cél az ellenfél életerejének lenullázása. Ha ez megtörtént egy 		újabb ellenféllel szállhat szembe mindaddig, amíg a karakterének életereje 0 nem lesz.
 	
-		A játékprogram készítés során Visual Studio 2013-at használjuk.
-		A program C# és XAML nyelven íródik.
-		
-	4. Jelenlegi folyamatok:
+- A rendszerre vonatkozó külső megszorítások:
 	
-		- az alkalmazás adatbázisának megtervezése
-		- képanyagok gyűjtése
-		- felhasználói felület kialakításának tervezése
+	A program nyílt forráskódú, a licenc kódját nyilvánosságra hozzuk, ez azt jelenti, hogy:
+	
+	- felhasználható (futtatható),
+	- tanulmányozható (az alkalmazás működését bárki megvizsgálhatja),
+	- módosítható (DE, a szerzőket és az eredeti forráskódot fel kell tüntetnie),
+	- publikálható a módosított változat.
+	
+- Jelenlegi folyamatok:
+	
+	A fő ablak tartalmaz 3 gombot (Játék, Betöltés, Kilépés).
+	A játék gombra kattintva egy újabb ablak jelenik meg, ahol meg kell adnunk a karakterünk adatait. A létrehoz gombra 		kattintva elkezdődik a játék egy új ablakban,
+	megjelennek a karakterünk és az ellenfelünk adatai, majd a támadás gombra kattintva felugrik egy ablak egy kérdéssel, 		amire helyesen kell válaszolnunk, hogy megsebezzük az ellenfelet.
+	A kilépés gombra kattintva kiléphetünk.
+	
+- Megvalósítandó folyamatok:
+
+	* Karakterünk képének kiválasztása több lehetőség közül.
+	* Korábban létrehozott karakter betöltése.
+	* Az események (körök száma, okozott és szenvedett sebzések) kiírása egy eseményközlőben.
+	* Az alkalmazás számolja a helyes és helytelen válaszok számát.
+	* Nyertes harc esetén a harc folytatása egy új ellenfél ellen
+	
 		
 		
