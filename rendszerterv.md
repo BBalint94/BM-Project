@@ -1,7 +1,9 @@
 # Rendszerterv:
 
 ### A rendszer célja:
-  A felhasználó szórakoztatása egy WPF-es alkalmazás által, ami egy egyszemélyes körökre osztott RPG alapú játék. A felhasználó egy karaktert hoz létre, amelynek választhat egy profilképet, megadhatja a nevét, választhat három kaszt közül egyet (harcos, mágus, íjász), illetve választhat egy fegyvert a kasztjához tartozó fegyverek közül. Ezután elkezdődik a játék, baloldalt megjelennek a karakterünk adatai (karakterünk neve, profilkép, életerősáv, kasztunk neve, karakter fegyvere), középen a különböző interakciók gombjai, jobboldalt az ellenségünk adatai (az alkalmazás választja ki véletlenszerűen az ellenséget), alul pedig az események olvashatóak. Az események az interakció gombok használatával történnek (támadás...stb.). A játékos akkor győz, ha az ellenfélnek 0-ra csökkenti az életerejét úgy, hogy a saját életereje nagyobb mint 0. Ha mindkét fél életereje 0-ra csökken, akkor az eredmény döntetlen, ha pedig csak a mi életerőnk lesz 0, akkor vesztettünk. Ha győzünk a játék megjutalmaz minket játékbeli pénz formájában. Kilépés esetén az alkalmazás elmenti a karakterünk állapotát, így később folytathatjuk a játékot onnan ahol abbahagytuk.
+  A felhasználó szórakoztatása, ismereteinek kibővítése egy WPF-es alkalmazás által, ami egy egyszemélyes körökre osztott RPG alapú játék. A felhasználó egy karaktert hoz létre, amelynek választhat egy profilképet, megadhatja a nevét, 
+választhat három kaszt közül egyet (harcos, mágus, íjász), illetve választhat egy fegyvert a kasztjához tartozó fegyverek közül. Ezután elkezdődik a játék, baloldalt megjelennek a karakterünk adatai (karakterünk neve, profilkép, életerősáv, kasztunk neve, karakter fegyvere), középen egy kardot ábrázoló gomb, jobboldalt az ellenségünk adatai (az alkalmazás választja ki véletlenszerűen az ellenséget), alul pedig az események olvashatóak. A kardot mintázó gomb megnyomásával felugrik egy kisebb ablak, ami tartalmaz egy kérdést, egy szövegbeviteli mezőt és egy ellenőriz gombot. Helyes válasz esetén csökken az ellenfél életereje, rossz válasz esetén viszont a felhasználó karaktere sebződik. A harc addig tart, amíg az egyik fél életereje 0 nem lesz. Ha legyőztük az ellenfelet, akkor lehetőségünk van folytatni a harcot a Következő ellenfél gomb megnyomásával,
+de akár abba is hagyhatjuk a játékot a kilépés gomb használatával. Nem szükséges folyton új karaktert létrehozni, a fő ablak betöltés gombját választva kiválaszthatunk egy korábban létrehozott karaktert, amivel folytathatjuk a játékot.
 
 ### Rendszerinformáció:
  
@@ -39,18 +41,22 @@
     - konténer osztály a fegyvereknek
     - az adatok tárolásának megoldása (fájlból beolvasás, fájlba írás)
     - a felhasználói felületen található elemek (pl. gombok, beviteli mezők) funkcióinak megírása
-  * Eddig még ki nem osztott feladatok:
-    * prototípus továbbfejlesztése:
-        - az interakciók gombjainak kibővítése (pl. védekezés, élet visszatöltés)
-        - játékbeli pénzrendszer bevezetése
-        - boltrendszer kialakítása
-        - korábbi játékállás folytatása (betöltés)
-        - életerősáv a szöveges változat helyett
-        - tárgyak listájának kibővítése
-        - animáció készítése, ami az interakciók hatására lejátszódik
+    - a kérdések konténer osztály kidolgozása, a kérdésekhez tartozó adatok beolvasása, helyes válasz ellenőrzése  
         
 ### Fejlesztés során használt szoftverkomponensek:
   * Visual Studio Community 2015: ingyenesen letölthető tanuló verzió
   * Microsoft Office: ingyenes tanulói verzió
   * GitHub
+  * Advanced Installer 13.4: ingyenes verzió
   * Windows operációs rendszer: iskolai ingyenes verzió
+  
+* Architekturális tervezési minta: Objective Oriented Programming (OOP)
+* Változások kezelése: a GitHub verziókövető rendszerrel követjük és vezetjük a változtatásokat
+
+### Rendszer bővíthetősége:
+	A rendszer könnyedén bővíthető, kiegészíthető, az OOP elveknek megfelelően íródott. 
+	Könnyedén integrálhatunk további kérdéseket is az alkalmazásba a válaszaikkal együtt, így élvezetesebbé téve a programot.
+  
+### Telepítési terv:
+		Az Advanced Installer program használatával egy telepítőfájlt létrehozunk az alkalmazásnak. 
+		Ezzel a fájllal bárki könnyedén telepítheti a számítógépére (a kívánt helyre) a szoftvert.
