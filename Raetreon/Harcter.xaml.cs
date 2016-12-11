@@ -50,6 +50,8 @@ namespace Raetreon
         static Esemenykozlo ek = new Esemenykozlo();
         static Hirdeto hirnok = new Hirdeto("Hírnök");
         static int korokszama = 1;
+        static int helyesv = 0;
+        static int helytelenv = 0;
 
         public Harcter(string a)
         {
@@ -231,19 +233,19 @@ namespace Raetreon
                     korokszama++;
                     if (harcosunk.harckeptelen == true && ellenseg.harckeptelen == false)
                     {
-                        MessageBox.Show("Vesztettél!");
+                        MessageBox.Show("Vesztettél! Helyes válasz: " + helyesv.ToString() + " db, Helytelen válasz: " + helytelenv.ToString() + " db");
                         vegevane = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                     if (ellenseg.harckeptelen == true && harcosunk.harckeptelen == false)
                     {
-                        MessageBox.Show("Nyertél!");
+                        MessageBox.Show("Nyertél! Helyes válasz: " + helyesv.ToString() + " db, Helytelen válasz: " + helytelenv.ToString() + " db");
                         vegevane = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);                        
                     }
                     if (harcosunk.harckeptelen == true && ellenseg.harckeptelen == true)
                     {
-                        MessageBox.Show("Döntetlen!");
+                        MessageBox.Show("Döntetlen! Helyes válasz: " + helyesv.ToString() + " db, Helytelen válasz: " + helytelenv.ToString() + " db");
                         vegevane = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);
                     }               
@@ -267,19 +269,19 @@ namespace Raetreon
                     korokszama++;
                     if (magusunk.harckeptelen == true && ellenseg.harckeptelen == false)
                     {
-                        MessageBox.Show("Vesztettél!");
+                        MessageBox.Show("Vesztettél! Helyes válasz: " + helyesv.ToString() + " db, Helytelen válasz: " + helytelenv.ToString() + " db");
                         vegevane = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                     if (ellenseg.harckeptelen == true && magusunk.harckeptelen == false)
                     {
-                        MessageBox.Show("Nyertél!");
+                        MessageBox.Show("Nyertél! Helyes válasz: " + helyesv.ToString() + " db, Helytelen válasz: " + helytelenv.ToString() + " db");
                         vegevane = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                     if (magusunk.harckeptelen == true && ellenseg.harckeptelen == true)
                     {
-                        MessageBox.Show("Döntetlen!");
+                        MessageBox.Show("Döntetlen! Helyes válasz: " + helyesv.ToString() + " db, Helytelen válasz: " + helytelenv.ToString() + " db");
                         vegevane = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
@@ -304,19 +306,19 @@ namespace Raetreon
                     korokszama++;
                     if (ijaszunk.harckeptelen == true && ellenseg.harckeptelen == false)
                     {
-                        MessageBox.Show("Vesztettél!");
+                        MessageBox.Show("Vesztettél! Helyes válasz: " + helyesv.ToString() + " db, Helytelen válasz: " + helytelenv.ToString() + " db");
                         vegevane = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                     if (ellenseg.harckeptelen == true && ijaszunk.harckeptelen == false)
                     {
-                        MessageBox.Show("Nyertél!");
+                        MessageBox.Show("Nyertél! Helyes válasz: " + helyesv.ToString() + " db, Helytelen válasz: " + helytelenv.ToString() + " db");
                         vegevane = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                     if (ijaszunk.harckeptelen == true && ellenseg.harckeptelen == true)
                     {
-                        MessageBox.Show("Döntetlen!");
+                        MessageBox.Show("Döntetlen! Helyes válasz: " + helyesv.ToString() + " db, Helytelen válasz: " + helytelenv.ToString() + " db");
                         vegevane = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
@@ -352,20 +354,20 @@ namespace Raetreon
                     korokszama++;
                     if (harcosunk.harckeptelen == true && ellenseg.harckeptelen == false)
                     {
-                        MessageBox.Show("Vesztettél!");
+                        MessageBox.Show("Vesztettél! Helyes válasz: " + helyesv.ToString() + " db, Helytelen válasz: " + helytelenv.ToString() + " db");
                         vegevane = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                     if (ellenseg.harckeptelen == true && harcosunk.harckeptelen == false)
                     {
-                        MessageBox.Show("Nyertél!");
+                        MessageBox.Show("Nyertél! Helyes válasz: " + helyesv.ToString() + " db, Helytelen válasz: " + helytelenv.ToString() + " db");
                         vegevane = true;
                         nyerte = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                     if (harcosunk.harckeptelen == true && ellenseg.harckeptelen == true)
                     {
-                        MessageBox.Show("Döntetlen!");
+                        MessageBox.Show("Döntetlen! Helyes válasz: " + helyesv.ToString() + " db, Helytelen válasz: " + helytelenv.ToString() + " db");
                         vegevane = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
@@ -389,20 +391,20 @@ namespace Raetreon
                     korokszama++;
                     if (magusunk.harckeptelen == true && ellenseg.harckeptelen == false)
                     {
-                        MessageBox.Show("Vesztettél!");
+                        MessageBox.Show("Vesztettél! Helyes válasz: " + helyesv.ToString() + " db, Helytelen válasz: " + helytelenv.ToString() + " db");
                         vegevane = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                     if (ellenseg.harckeptelen == true && magusunk.harckeptelen == false)
                     {
-                        MessageBox.Show("Nyertél!");
+                        MessageBox.Show("Nyertél! Helyes válasz: " + helyesv.ToString() + " db, Helytelen válasz: " + helytelenv.ToString() + " db");
                         vegevane = true;
                         nyerte = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                     if (magusunk.harckeptelen == true && ellenseg.harckeptelen == true)
                     {
-                        MessageBox.Show("Döntetlen!");
+                        MessageBox.Show("Döntetlen! Helyes válasz: " + helyesv.ToString() + " db, Helytelen válasz: " + helytelenv.ToString() + " db");
                         vegevane = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
@@ -427,20 +429,20 @@ namespace Raetreon
                     korokszama++;
                     if (ijaszunk.harckeptelen == true && ellenseg.harckeptelen == false)
                     {
-                        MessageBox.Show("Vesztettél!");
+                        MessageBox.Show("Vesztettél! Helyes válasz: " + helyesv.ToString() + " db, Helytelen válasz: " + helytelenv.ToString() + " db");
                         vegevane = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                     if (ellenseg.harckeptelen == true && ijaszunk.harckeptelen == false)
                     {
-                        MessageBox.Show("Nyertél!");
+                        MessageBox.Show("Nyertél! Helyes válasz: " + helyesv.ToString() + " db, Helytelen válasz: " + helytelenv.ToString() + " db");
                         vegevane = true;
                         nyerte = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);                        
                     }
                     if (ijaszunk.harckeptelen == true && ellenseg.harckeptelen == true)
                     {
-                        MessageBox.Show("Döntetlen!");
+                        MessageBox.Show("Döntetlen! Helyes válasz: " + helyesv.ToString() + " db, Helytelen válasz: " + helytelenv.ToString() + " db");
                         vegevane = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
@@ -467,9 +469,11 @@ namespace Raetreon
                 if(kerdwindow.DialogResult == true)
                 {
                     Tamadunk();
+                    helyesv++;
                 }else
                 {
                     Tamadnak();
+                    helytelenv++;
                 }                
             }
         }
@@ -481,12 +485,13 @@ namespace Raetreon
 
         private void kovetkezo_Click(object sender, RoutedEventArgs e)
         {
-            if (vegevane && nyerte)
+            if (vegevane == true && harcosunk!=null && harcosunk.harckeptelen == false || vegevane == true && magusunk!=null && magusunk.harckeptelen == false || vegevane == true && ijaszunk!=null && ijaszunk.harckeptelen == false)
             {
                 Harcter ht = Harcter.getInstance();
+                vegevane = false;
                 ht.AblakMegjelenit();
-                vegevane = false;                                
-            }else if (!nyerte)
+                                               
+            }else if (harcosunk!= null && harcosunk.harckeptelen == true || magusunk!=null && magusunk.harckeptelen == true || ijaszunk!=null && ijaszunk.harckeptelen == true)
             {
                 MessageBox.Show("Vesztettél! Nem folytathatod tovább a harcot!");
             }else
