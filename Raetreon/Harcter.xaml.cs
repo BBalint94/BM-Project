@@ -46,6 +46,7 @@ namespace Raetreon
         static Ijasz ijaszunk;
         static Ijasz korijasz = gc.korabbiijasz;        
         static bool vegevane = false;
+        static bool nyerte = false;
         static Esemenykozlo ek = new Esemenykozlo();
         static Hirdeto hirnok = new Hirdeto("Hírnök");
         static int korokszama = 1;
@@ -200,8 +201,7 @@ namespace Raetreon
                 ellensegeletero.Content = ellenseg.eletero;
                 ellenkasztja.Content = ellenseg.kaszt;
                 ellenfegyvere.Content = ellenseg.ellenfegyver.nev;
-                ellenseg.kep = ellenkepek[rnd.Next(0,ellenkepek.Count()+1)];
-                //ellenseg.kep = "Images/Ellenseg/golem1.png";
+                ellenseg.kep = ellenkepek[rnd.Next(0,ellenkepek.Count())];                
                 EllenKepKirak(ellenseg.kep);
             }            
             else throw new Exception("Hiba");
@@ -360,6 +360,7 @@ namespace Raetreon
                     {
                         MessageBox.Show("Nyertél!");
                         vegevane = true;
+                        nyerte = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                     if (harcosunk.harckeptelen == true && ellenseg.harckeptelen == true)
@@ -396,6 +397,7 @@ namespace Raetreon
                     {
                         MessageBox.Show("Nyertél!");
                         vegevane = true;
+                        nyerte = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);
                     }
                     if (magusunk.harckeptelen == true && ellenseg.harckeptelen == true)
@@ -433,6 +435,7 @@ namespace Raetreon
                     {
                         MessageBox.Show("Nyertél!");
                         vegevane = true;
+                        nyerte = true;
                         hirnok.update(korokszama, okoz, szenv, vegevane);                        
                     }
                     if (ijaszunk.harckeptelen == true && ellenseg.harckeptelen == true)
@@ -478,11 +481,14 @@ namespace Raetreon
 
         private void kovetkezo_Click(object sender, RoutedEventArgs e)
         {
-            if (vegevane)
+            if (vegevane && nyerte)
             {
                 Harcter ht = Harcter.getInstance();
                 ht.AblakMegjelenit();
                 vegevane = false;                                
+            }else if (!nyerte)
+            {
+                MessageBox.Show("Vesztettél! Nem folytathatod tovább a harcot!");
             }else
             {
                 MessageBox.Show("Még nincs vége a harcnak, nem válthatsz ellenfelet!");
