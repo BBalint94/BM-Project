@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Raetreon
 {
-    class KarakterRaktar
+    public class KarakterRaktar
     {
         private static KarakterRaktar uniqueInstance = null;
         private KarakterRaktar() { }

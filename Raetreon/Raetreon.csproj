@@ -65,6 +65,7 @@
     <Compile Include="Database\KarakterAdatbazis.cs" />
     <Compile Include="Database\KepAdatbazis.cs" />
     <Compile Include="Database\KerdesAdatbazis.cs" />
+    <Compile Include="Database\TestDatabase.cs" />
     <Compile Include="Ellensegek\Ellensegek.cs" />
     <Compile Include="GlobalClass.cs" />
     <Compile Include="Harcter.xaml.cs">
@@ -92,6 +93,7 @@
     <Compile Include="Targyak\Fegyverek\KozelharciF.cs" />
     <Compile Include="Targyak\Fegyverek\MagikusF.cs" />
     <Compile Include="Targyak\Fegyverek\TavolsagiF.cs" />
+    <Compile Include="TesztOsztaly.cs" />
     <Compile Include="Ujjatek.xaml.cs">
       <DependentUpon>Ujjatek.xaml</DependentUpon>
     </Compile>
